@@ -1,0 +1,39 @@
+:root {
+    /* Colors: */
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #ec2227;
+    --dark-red: #cc0000;
+    --helvetica: 'Helvetica';
+    --press-gothic: 'PressGothic';
+}
+
+.banner {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    background-image: url('/assets/img/home/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: auto;
+    min-height: 992px;
+}
+
+.banner .description {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    width: 100%;
+    max-width: 1060px;
+    padding: 56px 320px 56px 56px;
+    text-align: left;
+    font: normal normal normal 88px/97px var(--press-gothic);
+    letter-spacing: 0px;
+    color: var(--white);
+    background-color: var(--light-red);
+    text-transform: uppercase;
+}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {}

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'PressGothic';
+  src: url('PressGothic.eot');
+  src: url('PressGothic.eot?#iefix') format('embedded-opentype'),
+       url('PressGothic.svg#PressGothic') format('svg'),
+       url('PressGothic.ttf') format('truetype'),
+       url('PressGothic.woff') format('woff'),
+       url('PressGothic.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}

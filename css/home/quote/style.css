@@ -1,0 +1,42 @@
+:root {
+    /* Colors: */
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #ec2227;
+    --dark-red: #cc0000;
+    --helvetica: 'Helvetica';
+    --press-gothic: 'PressGothic';
+}
+
+.quote {
+    padding: 127px 20px;
+    background-color: var(--black);
+}
+
+.quote img {
+    margin-bottom: 52px;
+}
+
+.quote .quote__title {
+    text-align: left;
+    font: normal normal normal 32px/48px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--white);
+    opacity: 1;
+    margin-bottom: 52px;
+}
+
+.quote .quote__subtitle {
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
+    font: normal normal bold 18px/22px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--white);
+    opacity: 1;
+}
+
+
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {}

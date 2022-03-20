@@ -1,0 +1,112 @@
+:root {
+    /* Colors: */
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #ec2227;
+    --dark-red: #cc0000;
+    --grey: #F1F1F2;
+    --dark-grey: #828282;
+    --helvetica: 'Helvetica';
+    --press-gothic: 'PressGothic';
+}
+
+.impact {
+    padding: 168px 20px;
+    background-color: var(--grey);
+}
+
+.impact__top {
+    min-height: 756px;
+    padding: 88px 0;
+    border-bottom: 2px solid var(--dark-grey);
+}
+
+.impact__body-right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.impact__body-right img {
+    width: 100%;
+    height: auto;
+}
+
+.impact__body-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.impact__body-left-head .title {
+    text-align: left;
+    font: normal normal normal 64px/91px var(--press-gothic);
+    letter-spacing: 0px;
+    color: var(--light-red);
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 16px;
+}
+
+.impact__body-left-head .subtitle {
+    text-align: left;
+    font: normal normal normal 18px/29px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--black);
+    opacity: 1;
+}
+
+.impact__body-left-main p {
+    text-align: left;
+    font: normal normal normal 18px/29px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--black);
+    opacity: 1;
+    margin-bottom: 24px;
+}
+
+.impact__body-left-main p:last-child {
+    margin-bottom: 0;
+}
+
+.impact__body-left-footer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.impact__body-left-footer .secondary-button a {
+    color: var(--black);
+}
+
+
+.impact__bottom {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.impact__bottom-item {
+    padding-top: 88px;
+}
+
+.impact__bottom-title {
+    text-align: left;
+    font: normal normal normal 88px/89px var(--press-gothic);
+    letter-spacing: 0px;
+    color: var(--light-red);
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 8px;
+}
+
+.impact__bottom-subtitle {
+    text-align: left;
+    font: normal normal normal 18px/29px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--black);
+    opacity: 1;
+}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {}

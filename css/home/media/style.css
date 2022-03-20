@@ -1,0 +1,106 @@
+:root {
+    /* Colors: */
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #ec2227;
+    --dark-red: #cc0000;
+    --text-grey: #DBDCDE;
+    --grey: #F1F1F2;
+    --helvetica: 'Helvetica';
+    --press-gothic: 'PressGothic';
+}
+
+.media__body {
+    padding: 88px 0;
+}
+
+.media__body-top {
+    margin-bottom: 88px;
+}
+
+.media__body-top .title {
+    text-align: left;
+    font: normal normal normal 64px/91px var(--press-gothic);
+    letter-spacing: 0px;
+    color: var(--light-red);
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.media__body-top .secondary-button a {
+    color: var(--black);
+}
+
+.media__body-bottom .img-wrapper {
+    width: 100%;
+    max-width: 416px;
+}
+
+.media__body-bottom .card-title {
+    text-align: left;
+    font: normal normal bold 18px/22px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--white);
+    opacity: 1;
+}
+
+.media__body-bottom .card-text {
+    text-align: left;
+    font: normal normal normal 14px/20px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--text-grey);
+    opacity: 1;
+}
+
+.media__body-bottom .card-date {
+    text-align: left;
+    font: normal normal bold 14px/17px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--light-red) !important;
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.media__body-bottom {
+}
+.card-deck {
+}
+.media__body-bottom .card {
+    display: flex;
+    flex-direction: row;
+}
+.media__body-bottom .img-wrapper {
+    max-width: 260px;
+}
+
+.media__body-bottom .img-wrapper img{
+    width: 100%;
+    height: auto;
+}
+.card-img-top {
+}
+.media__body-bottom .card-body {
+    background-color: var(--grey);
+}
+.card-title {
+}
+.card-text {
+}
+.card-date {
+}
+
+.media__body-bottom .card-deck > div {
+    padding: 0;
+}
+
+.media__body-bottom .card-deck > div .card {
+    margin: 0;
+}
+
+.media__body-bottom .card-deck > div:nth-child(odd) {
+    padding: 0 8px 8px 0;
+}
+
+.media__body-bottom .card-deck > div:nth-child(even) {
+    padding: 0 0 8px 8px;
+}

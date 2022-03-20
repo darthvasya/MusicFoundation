@@ -1,0 +1,72 @@
+:root {
+    /* Colors: */
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #ec2227;
+    --dark-red: #cc0000;
+    --helvetica: 'Helvetica';
+    --press-gothic: 'PressGothic';
+}
+
+.music-matters {
+    padding: 168px 20px;
+    background-color: var(--black);
+}
+
+.music-matters__top {
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    padding: 88px 0;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.music-matters__top-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.music-matters__title {
+    margin-bottom: 80px;
+    text-align: left;
+    font: normal normal normal 64px/91px var(--press-gothic);
+    letter-spacing: 0px;
+    color: var(--light-red);
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.music-matters__description {
+    text-align: left;
+    font: normal normal normal 18px/29px var(--helvetica);
+    letter-spacing: 0px;
+    color: var(--white);
+    opacity: 1;
+}
+.music-matters__top-left .music-matters__description {
+    padding: 0 116px 0 0;
+}
+
+.music-matters__top-right {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.music-matters__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 88px 0;
+}
+
+.music-matters__because-item {
+    padding: 8px;
+}
+
+.music-matters__img {
+    margin-bottom: 40px;
+}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {}
