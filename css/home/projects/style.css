@@ -35,6 +35,15 @@
     color: var(--black);
 }
 
+.projects__body-bottom .card-deck {
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.projects__body-bottom .card-deck>div {
+    max-width: 416px;
+    margin: 0 0 16px;
+}
 .projects__body-bottom .img-wrapper {
     width: 100%;
     max-width: 416px;

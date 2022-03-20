@@ -29,12 +29,14 @@
 }
 
 .involved__body-bottom .card-deck {
-    padding: 8px;
+    justify-content: space-between;
+    padding: 0 16px;
 }
 
 .involved__body-bottom .card {
+    max-width: 416px;
     min-height: 520px;
-    margin: 0 8px;
+    margin: 0 0 16px;
 }
 
 .involved__body-bottom .card-body {
