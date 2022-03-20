@@ -30,13 +30,13 @@
 
 .involved__body-bottom .card-deck {
     justify-content: space-between;
-    padding: 0 16px;
 }
 
 .involved__body-bottom .card {
-    max-width: 416px;
+    width: 416px;
     min-height: 520px;
-    margin: 0 0 16px;
+    min-width: 335px;
+    margin: 0 8px 16px;
 }
 
 .involved__body-bottom .card-body {

@@ -29,17 +29,21 @@
 }
 
 .partners__body-bottom .img-wrapper {
-    width: 100%;
-    max-width: 200px;
+    /* width: 100%;
+    max-width: 200px; */
 }
 .partners__body-bottom .card-deck {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0 16px;
 }
 
 .partners__body-bottom .card-deck>div {
+    display: inline-block;
+    width: 200px;
+    min-width: 200px;
     max-width: 200px;
-    padding: 0 0 16px !important;
+    margin: 0 6px 16px !important;
 }
 
 @media (max-width: 991px) {}

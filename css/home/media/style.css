@@ -65,8 +65,6 @@
 .media__body-bottom .card {
     display: flex;
     flex-direction: row;
-    max-width: 632px;
-    max-height: 200px;
 }
 
 .media__body-bottom .img-wrapper {
@@ -128,24 +126,16 @@
     opacity: 1;
 }
 .media__body-bottom .card-deck {
+    display: flex;
     justify-content: space-between;
-    padding: 0 16px;
+    flex-wrap: wrap;
 }
 .media__body-bottom .card-deck>div {
-    max-width: 632px;
+    width: 100%;
+    margin: 0 7px 16px;
     padding: 0;
+    min-width: 470px;
 }
-.media__body-bottom .card-deck>div .card {
-    margin: 0 0 16px;
-}
-
-/* .media__body-bottom .card-deck>div:nth-child(odd) {
-    padding: 0 8px 16px 16px;
-}
-
-.media__body-bottom .card-deck>div:nth-child(even) {
-    padding: 0 16px 16px 8px;
-} */
 
 @media (max-width: 991px) {}
 

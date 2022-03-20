@@ -119,6 +119,10 @@
     color: var(--white);
     opacity: 1;
     text-decoration: none;
+    transition: all 0.6s ease 0s;
+}
+.heder__button a:hover {
+    background-color: var(--black);
 }
 
 .header__list {
@@ -383,5 +387,9 @@
     .header.active #Line_7 {
         fill: var(--white);
         stroke: var(--white);
+    }
+
+    .heder__button a:hover {
+        background-color: initial;
     }
 }

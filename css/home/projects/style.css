@@ -24,7 +24,7 @@
 
 .projects__body-top .title {
     text-align: left;
-    font: normal normal normal 64px/91px var(--press-gothic);
+    font: normal normal normal 64px/64px var(--press-gothic);
     letter-spacing: 0px;
     color: var(--light-red);
     text-transform: uppercase;
@@ -37,16 +37,21 @@
 
 .projects__body-bottom .card-deck {
     justify-content: space-between;
-    padding: 0 16px;
 }
 
 .projects__body-bottom .card-deck>div {
     max-width: 416px;
-    margin: 0 0 16px;
+    margin: 0 8px 16px;
+    /* min-width: 400px; */
 }
 .projects__body-bottom .img-wrapper {
     width: 100%;
     max-width: 416px;
+}
+
+.projects__body-bottom .img-wrapper img {
+    width: 100%;
+    height: auto;
 }
 
 .card-body {

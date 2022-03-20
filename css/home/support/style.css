@@ -44,7 +44,7 @@
 
 .support__body-right-head .title {
     text-align: left;
-    font: normal normal normal 64px/91px var(--press-gothic);
+    font: normal normal normal 64px/64px var(--press-gothic);
     letter-spacing: 0px;
     color: var(--light-red);
     text-transform: uppercase;
