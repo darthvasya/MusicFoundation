@@ -114,7 +114,7 @@
     padding: 16px 24px;
     color: var(--white);
     text-align: center;
-    font: normal normal bold 14px/17px var(--helvetica);
+    font: normal normal bold 14px/16px var(--helvetica);
     letter-spacing: 0.9px;
     color: var(--white);
     opacity: 1;
@@ -133,7 +133,7 @@
 
 .header__list li {
     list-style-type: none;
-    margin-right: 16px;
+    margin-right: 32px;
 }
 
 .header__list li a {

@@ -18,7 +18,7 @@
     justify-content: stretch;
     align-items: flex-start;
     padding: 88px 0;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid #676767;
 }
 
 .music-matters__top-left {

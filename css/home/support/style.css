@@ -15,13 +15,15 @@
 
 .support__body {
     min-height: 756px;
-    padding: 88px 0;
+    padding: 88px 16px;
 }
 
 .support__body-left {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 0;
+    max-width: 632px;
 }
 
 .support__body-left img {
@@ -34,6 +36,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding: 0;
 }
 
 .support__body-right-head {
