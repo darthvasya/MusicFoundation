@@ -155,45 +155,98 @@
     .footer__body>div {
         padding: 40px 0;
     }
+
     .footer__body .subscribe {
         order: 1;
     }
+
     .footer__body .social-links {
         order: 2;
     }
+
     .footer__body .nav {
         order: 3;
     }
+
     .footer__body .logo {
         order: 4;
     }
+
     .footer__body .subscribe .form-inline {
         display: flex;
         flex-direction: column;
     }
+
     .footer__body .subscribe .form-inline .form-group {
         width: 100%;
         margin: 0 0 16px;
     }
-    .footer__body .subscribe .form-inline .form-group input{
+
+    .footer__body .subscribe .form-inline .form-group input {
         width: 100%;
     }
-    .footer__body .subscribe .form-inline button{
+
+    .footer__body .subscribe .form-inline button {
         max-width: initial;
     }
+
     .footer__body .social-links {
         justify-content: space-around;
     }
+
     .footer__body .social-links a:not(:first-child) {
         margin-left: 0;
     }
+
     .footer__body .logo {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
     }
-    .footer__body .logo img{
+
+    .footer__body .logo img {
         margin-bottom: 32px;
+    }
+
+    .footer-nav__list {
+        list-style-position: inside;
+        -moz-column-count: 2;
+        /* Firefox */
+        -webkit-column-count: 2;
+        /* Safari and Chrome */
+        column-count: 2;
+        list-style-type: decimal;
+        height: 100px;
+        width: 265px;
+        display: flex;
+    }
+    .footer-nav__list li{
+        width: 100%;
+        max-width: 100px;
+    }
+    .footer-nav__list {
+        margin: 0;
+    }
+    .footer-nav__list li:nth-child(1) {
+        order: 1;
+    }
+    .footer-nav__list li:nth-child(2) {
+        order: 3;
+    }
+    .footer-nav__list li:nth-child(3) {
+        order: 5;
+    }
+    .footer-nav__list li:nth-child(4) {
+        order: 7;
+    }
+    .footer-nav__list li:nth-child(5) {
+        order: 2;
+    }
+    .footer-nav__list li:nth-child(6) {
+        order: 4;
+    }
+    .footer-nav__list li:nth-child(7) {
+        order: 6;
     }
 }

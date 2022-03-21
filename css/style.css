@@ -97,6 +97,10 @@ main {
     overflow: hidden;
   }
 
+  main {
+    padding: 83px 0 0 0;
+  }
+
   .container {
     max-width: 100%;
   }
