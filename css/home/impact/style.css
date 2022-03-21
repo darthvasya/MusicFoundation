@@ -44,6 +44,8 @@
 .impact__body-left-head .title {
     text-align: left;
     font: normal normal normal 64px/64px var(--press-gothic);
+    font-size: calc(40px + (24 + 24 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(40px + (24 + 24 * 0.7) * ((100vw - 767px) / 1920));
     letter-spacing: 0px;
     color: var(--light-red);
     text-transform: uppercase;
@@ -62,6 +64,8 @@
 .impact__body-left-main p {
     text-align: left;
     font: normal normal normal 18px/29px var(--helvetica);
+    font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(25px + (4 + 4 * 0.7) * ((100vw - 767px) / 1920));
     letter-spacing: 0px;
     color: var(--black);
     opacity: 1;
@@ -95,6 +99,7 @@
 .impact__bottom-title {
     text-align: left;
     font: normal normal normal 88px/89px var(--press-gothic);
+    font-size: calc(72px + (16 + 16 * 0.7) * ((100vw - 767px) / 1920));
     letter-spacing: 0px;
     color: var(--light-red);
     text-transform: uppercase;
@@ -105,6 +110,8 @@
 .impact__bottom-subtitle {
     text-align: left;
     font: normal normal normal 18px/29px var(--helvetica);
+    font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(25px + (4 + 4 * 0.7) * ((100vw - 767px) / 1920));
     letter-spacing: 0px;
     color: var(--black);
     opacity: 1;
@@ -112,4 +119,53 @@
 
 @media (max-width: 991px) {}
 
-@media (max-width: 767px) {}
+@media (max-width: 767px) {
+    .impact {
+        padding: 0 20px;
+    }
+    .impact__top {
+        padding: 0;
+        border-bottom: none;
+    }
+    .impact__body-right {
+        max-width: initial;
+        margin-bottom: 56px;
+    }
+    .impact__body-left {
+        max-width: 100%;
+        padding: 0 20px;
+    }
+    .impact__top .impact__body-left{
+        order: 2;
+    }
+    .impact__top .impact__body-right{
+        order: 1;
+    }
+    .impact__body-left-footer {
+        flex-direction: column;
+        margin-top: 40px;
+    }
+    .impact__body-left-footer .primary-button {
+        margin: 40px 0 16px;
+        max-width: initial;
+    }
+    .impact__body-left-footer .secondary-button {
+        max-width: initial;
+    }
+    .impact__body-left-footer .secondary-button a{
+        max-width: initial;
+        margin: 0;
+    }
+    .impact__body-left-head .subtitle {
+        margin-bottom: 56px;
+    }
+    .impact__bottom-item {
+        padding: 40px 0;
+    }
+    .impact__bottom-item:not(:last-child) {
+        border-bottom: 1px solid #676767;
+    }
+    .impact__bottom  {
+        padding: 40px 20px;
+    }
+}
