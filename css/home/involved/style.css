@@ -145,7 +145,7 @@
     }
 
     .involved__body-top {
-        margin-bottom: 56px;
+        margin-bottom: 0px;
         flex-direction: column;
     }
     .involved__body-top .title, .involved__body-top .description {

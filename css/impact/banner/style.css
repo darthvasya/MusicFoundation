@@ -1,0 +1,75 @@
+.impact .banner {
+	display: flex;
+	align-items: center;
+	min-height: 320px;
+}
+.impact .banner .image {
+	min-height: 320px;
+}
+.impact .banner .image img {
+	min-height: 320px;
+	object-fit: cover;
+	width: 100%;
+}
+.impact .banner .description {
+	position: relative;
+	background-color: transparent;
+	padding: 0;
+}
+
+.impact .quote {
+	background-color: var(--grey-bg);
+}
+.impact .quote .quote__title, .impact .quote .quote__subtitle {
+	color: var(--black);
+}
+.impact .partners__body {
+	padding: 256px 0;
+}
+
+@media (min-width: 1200px) {
+	.container {
+		max-width: 1280px;
+	}
+}
+
+@media (max-width: 991px) {}
+
+@media (max-width: 767px) {
+	body.lock {
+		overflow: hidden;
+	}
+
+	main {
+		padding: 83px 0 0 0;
+	}
+
+	.container {
+		max-width: 100%;
+	}
+
+	.content {
+		padding: 83px 0 0 0;
+	}
+
+	.impact .banner{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		background-image: url('../../../assets/img/impact/banner.jpg');
+		background-size: cover;
+		min-height: 140px;
+		padding: 0 20px;
+	}
+	.impact .banner .image {
+		display: none;
+	}
+	.impact .banner .description {
+		position: relative;
+		background-color: transparent;
+		padding: 0;
+	}
+	.impact .partners__body {
+		padding: 72px 0;
+	}
+}

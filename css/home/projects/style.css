@@ -91,7 +91,20 @@
     opacity: 1;
 }
 
+.card-deck{
+    width: 90%;
+    margin: 0px auto;
+    margin-top: 100px
+}
 
+.slick-slide {
+    margin: 10px
+}
+
+.slick-slide img {
+    width: 100%;
+    border: 0px solid #fff
+}
 
 @media (max-width: 991px) {}
 
@@ -103,7 +116,7 @@
     .projects__body {
         padding: 0;
     }
-    
+
     .projects__body-top {
         margin-bottom: 56px;
     }
@@ -121,9 +134,9 @@
         align-items: center;
         justify-content: space-between;
     }
+
     .projects__body-bottom {
         grid-template-columns: repeat(1, 1fr);
         row-gap: 16px;
     }
-    
 }
