@@ -7,6 +7,7 @@
   --grey-bg: #F1F1F2;
   --helvetica: 'Helvetica';
   --press-gothic: 'PressGothic';
+  --helvetica-bold: 'HelveticaBold';
 }
 
 *,
@@ -19,6 +20,10 @@
 html,
 body {
   height: 100%;
+}
+
+.container {
+  padding: 0 20px;
 }
 
 html {
@@ -47,15 +52,20 @@ main {
   align-items: center;
   width: 100%;
   max-width: 178px;
+  height: 48px;
 }
 .secondary-button a, .primary-button a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 100%;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 16px;
-  border: 1px solid var(--light-red);
+  padding: 0 16px;
+  outline: 1px solid var(--light-red);
   text-align: center;
-  font: normal normal bold 14px/14px var(--helvetica);
+  font: normal normal bold 14px/14px var(--helvetica-bold);
   letter-spacing: 0.9px;
   color: var(--white);
   opacity: 1;
@@ -64,20 +74,16 @@ main {
   transition: all 0.6s ease 0s;
 }
 .primary-button a {
-  border: solid 1px var(--light-red);
+  outline: solid 1px var(--light-red);
   background-color: var(--light-red);
 }
 .primary-button:hover a {
-  border: none;
+  outline: solid 1px var(--black);
   background-color: var(--black);
 }
 .secondary-button:hover a {
   background-color: var(--light-red);
-}
-
-.big-white-block {
-  padding: 168px 20px;
-  background-color: var(--white);
+  color: var(--white);
 }
 
 .card-deck {
@@ -89,17 +95,12 @@ main {
   display: flex;
   align-items: center;
   min-height: 320px;
-  /* background-image: url('../assets/img/about_us/banner.jpg');
-  background-size: cover; */
 }
 .about-us .banner .image {
   min-height: 320px;
-  /* display: none; */
-  /* object-fit: cover; */
 }
 .about-us .banner .image img {
   min-height: 320px;
-  /* display: none; */
   object-fit: cover;
   width: 100%;
 }
@@ -145,9 +146,6 @@ main {
 
   .content {
     padding: 83px 0 0 0;
-  }
-  .big-white-block {
-    padding: 72px 20px;
   }
 
   .about-us .banner{

@@ -11,13 +11,12 @@
 }
 
 .impact {
-    padding: 168px 20px;
+    padding: 256px 20px;
     background-color: var(--grey);
 }
 
 .impact__top {
-    min-height: 756px;
-    padding: 88px 16px;
+    padding: 0 0 88px;
     border-bottom: 1px solid #676767;
 }
 
@@ -37,8 +36,7 @@
 .impact__body-left {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    padding: 0;
+    padding: 99px 108px 75px 0;
 }
 
 .impact__body-left-head .title {
@@ -50,15 +48,7 @@
     color: var(--light-red);
     text-transform: uppercase;
     opacity: 1;
-    margin-bottom: 16px;
-}
-
-.impact__body-left-head .subtitle {
-    text-align: left;
-    font: normal normal normal 18px/29px var(--helvetica);
-    letter-spacing: 0px;
-    color: var(--black);
-    opacity: 1;
+    margin-bottom: 80px;
 }
 
 .impact__body-left-main p {
@@ -73,7 +63,7 @@
 }
 
 .impact__body-left-main p:last-child {
-    margin-bottom: 0;
+    margin-bottom: 56px;
 }
 
 .impact__body-left-footer {
@@ -90,10 +80,15 @@
 .impact__bottom {
     display: flex;
     flex-wrap: wrap;
+    padding-top: 88px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 193px;
+    row-gap: 103px;
 }
 
 .impact__bottom-item {
-    padding-top: 88px;
+    width: 100%;
 }
 
 .impact__bottom-title {
@@ -104,7 +99,7 @@
     color: var(--light-red);
     text-transform: uppercase;
     opacity: 1;
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 
 .impact__bottom-subtitle {
@@ -117,11 +112,17 @@
     opacity: 1;
 }
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .impact__bottom  {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 72px 20px;
+        row-gap: 0;
+    }
+}
 
 @media (max-width: 767px) {
     .impact {
-        padding: 0 20px;
+        padding: 0;
     }
     .impact__top {
         padding: 0;
@@ -143,7 +144,6 @@
     }
     .impact__body-left-footer {
         flex-direction: column;
-        margin-top: 40px;
     }
     .impact__body-left-footer .primary-button {
         margin: 40px 0 16px;
@@ -162,10 +162,21 @@
     .impact__bottom-item {
         padding: 40px 0;
     }
+    .impact__bottom-item:last-child {
+        padding: 40px 0 0;
+    }
     .impact__bottom-item:not(:last-child) {
         border-bottom: 1px solid #676767;
     }
     .impact__bottom  {
-        padding: 40px 20px;
+        grid-template-columns: repeat(1, 1fr);
+        padding: 72px 20px;
+        row-gap: 0;
+    }
+    .impact__body-left-head .title {
+        margin-bottom: 56px;
+    }
+    .impact__body-left-main p:last-child {
+        margin-bottom: 40px;
     }
 }

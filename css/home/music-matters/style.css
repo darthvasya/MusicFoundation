@@ -9,7 +9,7 @@
 }
 
 .music-matters {
-    padding: 168px 20px;
+    padding: 256px 20px;
     background-color: var(--black);
 }
 
@@ -17,7 +17,7 @@
     display: flex;
     justify-content: stretch;
     align-items: flex-start;
-    padding: 88px 0;
+    padding: 0 0 88px;
     border-bottom: 1px solid #676767;
 }
 
@@ -58,9 +58,10 @@
 }
 
 .music-matters__bottom {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 88px 0;
+    padding: 88px 0 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 144px;
 }
 
 .music-matters__bottom .secondary-button {
@@ -68,7 +69,7 @@
 }
 
 .music-matters__because-item {
-    padding: 8px;
+    width: 100%;
 }
 
 .music-matters__img {
@@ -86,13 +87,14 @@
         border-bottom: none;
     }
     .music-matters__top-left {
-        padding: 0 20px;
+        padding: 0;
     }
     .music-matters__title {
         margin-bottom: 64px;
     }
     .music-matters__bottom {
-        padding: 0 20px;
+        padding: 0;
+        grid-template-columns: repeat(1, 1fr);
     }
     .music-matters__because-item:first-child {
         border-top: 1px solid #676767;
@@ -103,6 +105,7 @@
     }
     .music-matters__because-item:last-child {
         border-bottom: none;
+        padding-bottom: 56px;
     }
     .music-matters .secondary-button {
         max-width: initial;
