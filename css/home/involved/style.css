@@ -10,12 +10,17 @@
     --helvetica: 'Helvetica';
     --press-gothic: 'PressGothic';
 }
+
 .involved {
     padding: 256px 20px 158px;
 }
 
 .involved__body-top {
     margin-bottom: 88px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .involved__body-top .title {
@@ -27,6 +32,18 @@
     color: var(--light-red);
     text-transform: uppercase;
     opacity: 1;
+}
+
+.involved__body-top .description {
+    text-align: left;
+    font: normal normal normal 18px/29px var(--helvetica);
+    font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(25px + (4 + 4 * 0.7) * ((100vw - 767px) / 1920));
+    letter-spacing: 0px;
+    color: var(--black);
+    opacity: 1;
+    max-width: 524px;
+    margin-left: 16px;
 }
 
 .involved__body-bottom {
@@ -89,10 +106,12 @@
     height: 63px;
     max-width: initial;
 }
+
 .involved__body-bottom .secondary-button a {
     padding: 0 16px;
     background-color: var(--light-red);
 }
+
 .involved__body-bottom .secondary-button a:hover {
     padding: 0 16px;
     background-color: var(--black);
@@ -108,6 +127,7 @@
     .involved__body-bottom .card-text {
         padding-right: 0px;
     }
+
     .involved__body-bottom {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 16px;
@@ -119,18 +139,34 @@
     .involved {
         padding: 72px 20px;
     }
+
     .involved__body {
         padding: 0;
     }
+
     .involved__body-top {
         margin-bottom: 56px;
+        flex-direction: column;
     }
+    .involved__body-top .title, .involved__body-top .description {
+        width: 100%;
+    }
+    .involved__body-top .title {
+        margin-bottom: 56px;
+    }
+    
+    .involved__body-top .description {
+        margin: 0;
+    }
+
     .involved__body-bottom .card-deck {
         align-items: center;
     }
+
     .involved__body-bottom {
         grid-template-columns: repeat(1, 1fr);
     }
+
     .involved__body-bottom .card-title {
         display: flex;
         flex-direction: row;
@@ -138,6 +174,7 @@
         align-items: center;
         margin-bottom: 56px;
     }
+
     .involved__body-bottom .card-text {
         margin-bottom: 32px;
     }
