@@ -13,11 +13,8 @@
 }
 
 .directors {
+    padding: 256px 20px;
     background-color: var(--black);
-}
-
-.directors__body {
-    padding: 256px 0;
 }
 
 .directors__body-top {
@@ -114,8 +111,8 @@
 }
 
 @media (max-width: 767px) {
-    .directors__body {
-        padding: 72px 0;
+    .directors {
+        padding: 72px 20px;
     }
     .directors__body-top {
         margin-bottom: 56px;

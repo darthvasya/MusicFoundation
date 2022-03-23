@@ -14,8 +14,7 @@
 }
 
 .impact__body {
-	min-height: 756px;
-	padding: 88px 16px;
+	justify-content: space-between;
 }
 
 .impact__body-left {
@@ -23,7 +22,6 @@
 	justify-content: center;
 	align-items: center;
 	padding: 0;
-	max-width: 632px;
 }
 
 .impact__body-left img {
@@ -73,7 +71,7 @@
 		padding: 72px 20px;
 	}
 	.impact__body {
-		padding: 0 20px;
+		padding: 0;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;

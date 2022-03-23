@@ -1,0 +1,106 @@
+:root {
+    /* Colors: */
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #ec2227;
+    --dark-red: #cc0000;
+    --text-grey: #DBDCDE;
+    --grey: #F1F1F2;
+    --card-text-grey: #676767;
+    --helvetica: 'Helvetica';
+    --press-gothic: 'PressGothic';
+    --helvetica-bold: 'HelveticaBold';
+}
+
+.benefits-of-music {
+    padding: 256px 20px;
+    background-color: var(--black);
+}
+
+.benefits-of-music__body {
+}
+
+.benefits-of-music__body-top {
+    margin-bottom: 88px;
+}
+
+.benefits-of-music .title {
+    text-align: left;
+    font: normal normal normal 64px/64px var(--press-gothic);
+    font-size: calc(40px + (24 + 24 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(40px + (24 + 24 * 0.7) * ((100vw - 767px) / 1920));
+    letter-spacing: 0px;
+    color: var(--light-red);
+    text-transform: uppercase;
+    opacity: 1;
+}
+
+.benefits-of-music__body-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 160px;
+    row-gap: 133px;
+}
+
+.benefits-of-music__item {
+    
+}
+.music-matters__img {
+    width: 100%;
+    max-width: 88px;
+    height: 100%;
+    max-height: 88px;
+    margin-bottom: 40px;
+}
+.benefits-of-music__title {
+    font: normal normal normal 18px/22px var(--helvetica-bold);
+    font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(25px + (-3 + -3 * 0.7) * ((100vw - 767px) / 1920));
+    letter-spacing: 0px;
+    color: var(--white);
+    opacity: 1;
+    margin-bottom: 24px;
+}
+.benefits-of-music__description {
+    text-align: left;
+    font: normal normal normal 18px/29px var(--helvetica);
+    font-size: calc(16px + (2 + 2 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(25px + (4 + 4 * 0.7) * ((100vw - 767px) / 1920));
+    letter-spacing: 0px;
+    color: var(--text-grey);
+    opacity: 1;
+}
+
+@media (max-width: 1199px) {
+    
+}
+
+@media (max-width: 991px) {
+    .benefits-of-music__body-bottom {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .benefits-of-music {
+        padding: 72px 20px;
+        background-color: var(--black);
+    }
+    .benefits-of-music__body-top {
+        margin-bottom: 56px;
+    }
+    .benefits-of-music__body-bottom {
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 0;
+        row-gap: 0;
+    }
+    
+    .benefits-of-music__item {
+        padding: 36px 0;
+        border-bottom: 1px solid #676767;
+    }
+    .benefits-of-music__item:last-child {
+        border-bottom: none;
+        padding-bottom: 56px;
+    }
+}
