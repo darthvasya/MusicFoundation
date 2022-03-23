@@ -10,7 +10,7 @@
 }
 
 .projects {
-	padding: 168px 20px;
+	padding: 256px 20px;
 	background-color: var(--white);
 }
 
@@ -138,6 +138,11 @@
 
 	.projects__body-top {
 		margin-bottom: 56px;
+	}
+
+	.projects__body-bottom .img-wrapper {
+		width: 100%;
+		max-width: initial;
 	}
 
 	.projects__body .secondary-button {
