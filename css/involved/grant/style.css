@@ -1,0 +1,41 @@
+.grant {
+	margin-top: 256px;
+}
+
+.grant-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 121px;
+	padding: 0 32px;
+	background: #343434;
+}
+
+.grant_message {
+	font-size: calc(18px + (6 + 6 * 0.7) * ((100vw - 767px) / 1920));
+	color: #ffffff;
+}
+
+.grant_message p {
+	margin-bottom: 0;
+}
+
+.grant_button button {
+	width: 100%;
+	max-width: 178px;
+	padding: 16px 24px;
+	text-align: center;
+	font: normal normal bold 14px/16px var(--helvetica-bold);
+	letter-spacing: 0.9px;
+	color: #ffffff;
+	background-color: #ec2227;
+	border: none;
+	border-radius: 0;
+	text-transform: uppercase;
+	opacity: 1;
+}
+
+.grant_button button:hover {
+	background-color: #000000;
+}
