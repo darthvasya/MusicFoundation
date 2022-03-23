@@ -1,0 +1,18 @@
+.impact .banner {
+	display: flex;
+	align-items: center;
+	min-height: 320px;
+}
+.impact .banner .image {
+	min-height: 320px;
+}
+.impact .banner .image img {
+	min-height: 320px;
+	object-fit: cover;
+	width: 100%;
+}
+.impact .banner .description {
+	position: relative;
+	background-color: transparent;
+	padding: 0;
+}
