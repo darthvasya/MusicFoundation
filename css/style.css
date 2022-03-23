@@ -119,9 +119,6 @@ main {
 .about-us .partners__body {
   padding: 256px 0;
 }
-.about-us .involved__body {
-  padding: 256px 0;
-}
 
 @media (min-width: 1200px) {
   .container {
@@ -164,6 +161,9 @@ main {
     position: relative;
     background-color: transparent;
     padding: 0;
+  }
+  .about-us .partners__body {
+    padding: 72px 0;
   }
 }
 
