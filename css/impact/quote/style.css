@@ -1,0 +1,17 @@
+:root {
+	/* Colors: */
+	--black: #000000;
+	--grey: #F1F1F2;
+}
+
+.quote {
+	background-color: var(--grey);
+}
+
+.quote .quote__title {
+	color: var(--black);
+}
+
+.quote .quote__subtitle {
+	color: var(--black);
+}
