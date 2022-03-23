@@ -9,7 +9,7 @@
 }
 
 .quote {
-    padding: 126px 20px;
+    padding: 126px 0;
     background-color: var(--black);
 }
 
@@ -45,6 +45,6 @@
 
 @media (max-width: 767px) {
     .quote {
-        padding: 72px 20px;
+        padding: 72px 0;
     }
 }

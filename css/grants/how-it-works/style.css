@@ -1,0 +1,128 @@
+:root {
+    /* Colors: */
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #ec2227;
+    --dark-red: #cc0000;
+    --grey: #676767;
+    --helvetica: 'Helvetica';
+    --press-gothic: 'PressGothic';
+    --helvetica-bold: 'HelveticaBold';
+}
+
+.how-it-works {
+    padding: 256px 20px;
+    background-color: var(--black);
+}
+
+.how-it-works__body {}
+
+.how-it-works__body-title {
+    text-align: left;
+    font: normal normal normal 64px/64px var(--press-gothic);
+    font-size: calc(40px + (24 + 24 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(40px + (24 + 24 * 0.7) * ((100vw - 767px) / 1920));
+    letter-spacing: 0px;
+    color: var(--white);
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 112px;
+}
+
+.title {}
+
+.how-it-works__body-step {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-top: 48px;
+    margin-bottom: 86px;
+    border-top: 1px solid var(--grey);
+}
+
+.how-it-works__body-step:last-child {
+    margin-bottom: 140px;
+}
+
+.step-right {}
+
+.step {
+    font: normal normal bold 14px/17px var(--helvetica-bold);
+    letter-spacing: 0.9px;
+    color: var(--white);
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 24px;
+}
+
+.step-title {
+    text-align: left;
+    font: normal normal normal 48px/48px var(--press-gothic);
+    font-size: calc(40px + (8 + 8 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(40px + (8 + 8 * 0.7) * ((100vw - 767px) / 1920));
+    letter-spacing: 0px;
+    color: var(--light-red);
+    text-transform: uppercase;
+    opacity: 1;
+    margin-bottom: 16px;
+    max-width: 365px;
+}
+
+.step-left p,
+.step-left ul li,
+.step-left ol li {
+    text-align: left;
+    font: normal normal normal 18px/29px var(--helvetica);
+    font-size: calc(16px + (4 + 4 * 0.7) * ((100vw - 767px) / 1920));
+    line-height: calc(25px + (4 + 4 * 0.7) * ((100vw - 767px) / 1920));
+    letter-spacing: 0px;
+    color: var(--white);
+    opacity: 1;
+}
+
+.step-left p {
+    margin-bottom: 24px;
+}
+
+.step-left ul, .step-left ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.step-left ol li {
+    margin-bottom: 24px;
+}
+
+@media (max-width: 991px) {
+    .how-it-works {
+        padding: 156px 20px;
+    }
+
+    .how-it-works__body-title {
+        margin-bottom: 48px;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-it-works {
+        padding: 72px 20px 0;
+    }
+
+    .how-it-works__body-title {
+        margin-bottom: 69px;
+    }
+
+    .how-it-works__body-step {
+        grid-template-columns: repeat(1, 1fr);
+        padding-top: 24px;
+        margin-bottom: 64px;
+    }
+
+    .how-it-works__body-step:last-child {
+        margin-bottom: 72px;
+    }
+
+    .step-title {
+        max-width: 100%;
+    }
+}

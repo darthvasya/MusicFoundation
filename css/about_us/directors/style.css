@@ -43,6 +43,7 @@
 .directors__body-bottom .img-wrapper {
     width: 100%;
     max-width: 416px;
+    flex-shrink: 0;
 }
 
 .directors__body-bottom .card-body__text {
@@ -66,6 +67,7 @@
 .directors__body-bottom .card {
     display: flex;
     flex-direction: row;
+    align-items: center;
     border: none;
 }
 

@@ -91,29 +91,29 @@ main {
   margin-left: 0 !important;
 }
 
-.about-us .banner {
+.secondary-banner {
   display: flex;
   align-items: center;
   min-height: 320px;
 }
-.about-us .banner .image {
+.secondary-banner .image {
   min-height: 320px;
 }
-.about-us .banner .image img {
+.secondary-banner .image img {
   min-height: 320px;
   object-fit: cover;
   width: 100%;
 }
-.about-us .banner .description {
+.secondary-banner .description {
   position: relative;
   background-color: transparent;
   padding: 0;
 }
 
-.about-us .quote {
+.secondary-quote {
   background-color: var(--grey-bg);
 } 
-.about-us .quote .quote__title, .about-us .quote .quote__subtitle {
+.secondary-quote .quote__title, .secondary-quote .quote__subtitle {
   color: var(--black);
 }
 .about-us .partners__body {
@@ -149,7 +149,7 @@ main {
     padding: 83px 0 0 0;
   }
 
-  .about-us .banner{
+  .secondary-banner {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -158,10 +158,10 @@ main {
     min-height: 140px;
     padding: 0 20px;
   }
-  .about-us .banner .image {
+  .secondary-banner .image {
     display: none;
   }
-  .about-us .banner .description {
+  .secondary-banner .description {
     position: relative;
     background-color: transparent;
     padding: 0;
