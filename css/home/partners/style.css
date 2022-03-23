@@ -34,6 +34,10 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 16px;
+    column-gap: 16px; */
 }
 
 .partners__body-bottom .card-deck>div {
@@ -42,9 +46,11 @@
     min-width: 200px;
     max-width: 200px;
     margin: 0 6px 16px !important;
+    margin: 0;
     border: none;
 }
-.partners__body-bottom .card-deck>div img{
+
+.partners__body-bottom .card-deck>div img {
     width: 100%;
     height: auto;
 }
@@ -55,15 +61,18 @@
     .partners__body {
         padding: 0 0 72px;
     }
+
     .partners__body-top {
         margin-bottom: 56px;
     }
+
     .partners__body-bottom .card-deck {
         display: flex;
         flex-wrap: wrap;
         flex-direction: row;
         justify-content: center;
     }
+
     .partners__body-bottom .card-deck>div {
         display: inline-block;
         width: 160px;

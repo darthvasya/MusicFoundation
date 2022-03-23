@@ -46,6 +46,8 @@
     flex-direction: column;
     justify-content: space-between;
     padding: 32px;
+    background-color: var(--black);
+    
 }
 
 .involved__body-bottom .card-title {

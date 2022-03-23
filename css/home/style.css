@@ -4,7 +4,6 @@
   --white: #ffffff;
   --light-red: #ec2227;
   --dark-red: #cc0000;
-  --grey-bg: #F1F1F2;
   --helvetica: 'Helvetica';
   --press-gothic: 'PressGothic';
 }
@@ -85,43 +84,6 @@ main {
   margin-left: 0 !important;
 }
 
-.about-us .banner {
-  display: flex;
-  align-items: center;
-  min-height: 320px;
-  /* background-image: url('../assets/img/about_us/banner.jpg');
-  background-size: cover; */
-}
-.about-us .banner .image {
-  min-height: 320px;
-  /* display: none; */
-  /* object-fit: cover; */
-}
-.about-us .banner .image img {
-  min-height: 320px;
-  /* display: none; */
-  object-fit: cover;
-  width: 100%;
-}
-.about-us .banner .description {
-  position: relative;
-  background-color: transparent;
-  padding: 0;
-}
-
-.about-us .quote {
-  background-color: var(--grey-bg);
-} 
-.about-us .quote .quote__title, .about-us .quote .quote__subtitle {
-  color: var(--black);
-}
-.about-us .partners__body {
-  padding: 256px 0;
-}
-.about-us .involved__body {
-  padding: 256px 0;
-}
-
 @media (min-width: 1200px) {
   .container {
     max-width: 1280px;
@@ -148,24 +110,6 @@ main {
   }
   .big-white-block {
     padding: 72px 20px;
-  }
-
-  .about-us .banner{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-image: url('../assets/img/about_us/banner.jpg');
-    background-size: cover;
-    min-height: 140px;
-    padding: 0 20px;
-  }
-  .about-us .banner .image {
-    display: none;
-  }
-  .about-us .banner .description {
-    position: relative;
-    background-color: transparent;
-    padding: 0;
   }
 }
 
