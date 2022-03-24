@@ -157,6 +157,9 @@
 }
 
 @media (max-width: 991px) {
+    .media {
+        padding: 156px 20px;
+    }
     .media__body-bottom .img-wrapper {
        display: none;
     }

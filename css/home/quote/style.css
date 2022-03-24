@@ -9,12 +9,16 @@
 }
 
 .quote {
-    padding: 126px 0;
+    padding: 126px 20px;
     background-color: var(--black);
 }
 
 .quote img {
     margin-bottom: 52px;
+}
+
+.quote-body {
+    margin: 0 -20px;
 }
 
 .quote .quote__title {
@@ -45,6 +49,6 @@
 
 @media (max-width: 767px) {
     .quote {
-        padding: 72px 0;
+        padding: 72px 20px;
     }
 }

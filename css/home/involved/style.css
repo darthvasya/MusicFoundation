@@ -124,6 +124,9 @@
 }
 
 @media (max-width: 991px) {
+    .involved {
+        padding: 156px 20px;
+    }
     .involved__body-bottom .card-text {
         padding-right: 0px;
     }
@@ -132,16 +135,6 @@
         grid-template-columns: repeat(2, 1fr);
         column-gap: 16px;
         row-gap: 16px;
-    }
-}
-
-@media (max-width: 767px) {
-    .involved {
-        padding: 72px 20px;
-    }
-
-    .involved__body {
-        padding: 0;
     }
 
     .involved__body-top {
@@ -156,7 +149,18 @@
     }
     
     .involved__body-top .description {
-        margin: 0;
+        max-width: 100%;
+        margin: 0 0 56px;
+    }
+}
+
+@media (max-width: 767px) {
+    .involved {
+        padding: 72px 20px;
+    }
+
+    .involved__body {
+        padding: 0;
     }
 
     .involved__body-bottom .card-deck {

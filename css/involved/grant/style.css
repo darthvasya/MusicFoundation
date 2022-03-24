@@ -1,20 +1,38 @@
+:root {
+    /* Colors: */
+    --black: #000000;
+    --white: #ffffff;
+    --light-red: #ec2227;
+    --dark-red: #cc0000;
+    --text-grey: #DBDCDE;
+    --grey: #F1F1F2;
+    --card-text-grey: #676767;
+    --helvetica: 'Helvetica';
+    --press-gothic: 'PressGothic';
+}
+
 .grant {
-	margin-top: 256px;
+	padding: 0 20px;
 }
 
 .grant-container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	width: 100%;
-	height: 121px;
+	height: 120px;
 	padding: 0 32px;
-	background: #343434;
+	background: #242424;
+	margin: 0 -20px;
 }
 
 .grant_message {
+	text-align: left;
+	font: normal normal normal 24px/24px var(--helvetica);
 	font-size: calc(18px + (6 + 6 * 0.7) * ((100vw - 767px) / 1920));
-	color: #ffffff;
+	line-height: calc(22px + (2 + 2 * 0.7) * ((100vw - 767px) / 1920));;
+	letter-spacing: 0px;
+	color: var(--white);
+	opacity: 1;
 }
 
 .grant_message p {
@@ -41,10 +59,6 @@
 }
 
 @media (max-width: 767px) {
-	.grant {
-		margin-top: 72px;
-	}
-
 	.grant .container {
 		padding: 0;
 	}
@@ -56,13 +70,12 @@
 		padding: 40px 20px;
 	}
 
-	.grant_button {
+	.grant_message {
 		width: 100%;
-		margin-top: 16px;
+		margin-bottom: 16px;
 	}
 
-	.grant_button button {
-		max-width: initial;
-		padding: 19px 0;
+	.grant .primary-button {
+		max-width: 100%;
 	}
 }

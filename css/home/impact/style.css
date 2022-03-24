@@ -10,11 +10,6 @@
     --press-gothic: 'PressGothic';
 }
 
-.impact {
-    padding: 256px 20px;
-    background-color: var(--grey);
-}
-
 .impact__top {
     padding: 0 0 88px;
     border-bottom: 1px solid #676767;
@@ -116,11 +111,13 @@
     .impact__bottom  {
         grid-template-columns: repeat(2, 1fr);
         padding: 72px 20px;
-        row-gap: 0;
     }
 }
 
 @media (max-width: 767px) {
+    .impact__bottom  {
+        row-gap: 0;
+    }
     .impact {
         padding: 0;
     }

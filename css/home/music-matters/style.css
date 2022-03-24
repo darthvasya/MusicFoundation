@@ -76,7 +76,11 @@
     margin-bottom: 40px;
 }
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .music-matters {
+        padding: 156px 20px;
+    }
+}
 
 @media (max-width: 767px) {
     .music-matters {

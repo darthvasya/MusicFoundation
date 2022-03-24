@@ -110,6 +110,9 @@
     .directors__body-bottom .card-deck {
         grid-template-columns: repeat(2, 1fr);
     }
+    .directors {
+        padding: 156px 20px;
+    }
 }
 
 @media (max-width: 767px) {

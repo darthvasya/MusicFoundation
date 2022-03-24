@@ -31,6 +31,7 @@
 	color: var(--light-red);
 	text-transform: uppercase;
 	opacity: 1;
+	padding: 0;
 }
 
 .projects__body-top .secondary-button a {
@@ -101,7 +102,7 @@
 
 .projects__ctrls-container {
 	justify-content: center;
-	margin-top: 38px;
+	margin-top: 40px;
 }
 
 .projects__ctrls-status {
@@ -125,7 +126,11 @@
 	cursor: pointer;
 }
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+	.projects {
+		padding: 156px 20px;
+	}
+}
 
 @media (max-width: 767px) {
 	.projects {
