@@ -145,4 +145,7 @@
         grid-template-columns: repeat(1, 1fr);
         row-gap: 42px;
     }
+    .directors__body-bottom .img-wrapper {
+        max-width: 95px;
+    }
 }
