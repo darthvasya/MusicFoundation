@@ -51,12 +51,23 @@
     border: none;
 }
 .projects__body-bottom .img-wrapper {
+    position: relative;
     width: 100%;
 }
 
 .projects__body-bottom .img-wrapper img {
     width: 100%;
     height: auto;
+}
+
+.projects__body-bottom .img-wrapper .play {
+    cursor: pointer;
+    width: initial;
+    height: initial;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-25%, -25%);
 }
 
 .card-body {
