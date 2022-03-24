@@ -1,0 +1,11 @@
+@media (max-width: 767px) {
+	.involved-wrapper .secondary-banner {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		background-image: url(../../../assets/img/involved/banner-min.jpg);
+		background-size: cover;
+		min-height: 140px;
+		padding: 0 20px;
+	}
+}

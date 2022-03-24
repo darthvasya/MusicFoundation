@@ -39,3 +39,30 @@
 .grant_button button:hover {
 	background-color: #000000;
 }
+
+@media (max-width: 767px) {
+	.grant {
+		margin-top: 72px;
+	}
+
+	.grant .container {
+		padding: 0;
+	}
+
+	.grant-container {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		padding: 40px 20px;
+	}
+
+	.grant_button {
+		width: 100%;
+		margin-top: 16px;
+	}
+
+	.grant_button button {
+		max-width: initial;
+		padding: 19px 0;
+	}
+}
