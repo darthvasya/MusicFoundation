@@ -89,7 +89,11 @@
     color: var(--black);
 }
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .support {
+        padding: 156px 20px;
+    }
+}
 
 @media (max-width: 768px) {
     .support {

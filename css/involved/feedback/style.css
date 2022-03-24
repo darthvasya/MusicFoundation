@@ -1,10 +1,11 @@
 .feedback-section {
-	margin-top: 256px;
+	padding: 256px 20px;
 }
 
 .feedback-container {
 	display: flex;
 	justify-content: space-between;
+	margin: 0 -20px;
 }
 
 .feedback-form {
@@ -21,7 +22,8 @@
 .feedback-input {
 	width: 100%;
 	margin-bottom: 24px;
-	padding: 17px 0 15px 16px;
+	max-height: 48px;
+	padding: 16px;
 	font-family: "Helvetica", sans-serif;
 	font-size: 16px;
 	background: #f1f1f2;
@@ -30,18 +32,18 @@
 }
 
 .feedback-input:active {
-	border: 2px solid #676767;
+	outline: 2px solid #EC2227;
 }
 
 
 .feedback-input:focus {
-	border: 2px solid #676767;
+	outline: 2px solid #EC2227;
 }
 
 .feedback-textarea {
 	height: 192px;
 	margin-bottom: 32px;
-	padding: 17px 0 15px 16px;
+	padding: 16px;
 	font-family: "Helvetica", sans-serif;
 	font-size: 16px;
 	background: #f1f1f2;
@@ -51,12 +53,12 @@
 }
 
 .feedback-textarea:active {
-	border: 2px solid #676767;
+	outline: 2px solid #EC2227;
 }
 
 
 .feedback-textarea:focus {
-	border: 2px solid #676767;
+	outline: 2px solid #EC2227;
 }
 
 .feedback-caption {
@@ -80,6 +82,29 @@
 
 .feedback-button:hover {
 	background-color: #000000;
+}
+.feedback-button {
+    width: 100%;
+    max-width: 178px;
+    padding: 16px;
+    text-align: center;
+    font: normal normal bold 14px/16px var(--helvetica-bold);
+    letter-spacing: 0.9px;
+    color: var(--white);
+    text-transform: uppercase;
+    opacity: 1;
+    background-color: var(--light-red);
+    border: none;
+    border-radius: 0;
+	-webkit-transition: all 0.6s ease 0s;
+    transition: all 0.6s ease 0s;
+}
+.feedback-button:hover, .feedback-button:active {
+    background-color: var(--black);
+    outline: 1px solid var(--black);
+}
+.feedback-button:focus {
+    box-shadow: none;
 }
 
 .caption-heading h2 {
@@ -108,39 +133,47 @@
 	color: var(--black);
 	opacity: 1;
 }
+.caption-text p:not(:last-child) {
+	margin-bottom: 24px;
+}
 
 .caption-contacts-link {
 	display: inline-block;
 	padding-bottom: 2px;
 	font-family: "HelveticaBold", sans-serif;
 	font-size: 14px;
-	line-height: 5px;
+	line-height: 17px;
 	color: #cc0000;
 	text-transform: uppercase;
 	border-bottom: 2px solid #cc0000;
+}
+.caption-contacts-link:hover {
+	color: #cc0000;
 }
 
 @media (max-width: 1199px) {
 	.feedback-form,
 	.feedback-caption {
-		max-width: 400px;
+		max-width: 450px;
 	}
 }
 
 @media (max-width: 991px) {
+	.feedback-section {
+		padding: 156px 20px;
+	}
 	.feedback-form,
 	.feedback-caption {
-		max-width: 300px;
-	}
-
-	.caption-contacts-link {
-		padding-bottom: 10px;
+		max-width: 340px;
 	}
 }
 
 @media (max-width: 767px) {
 	.feedback-section {
-		margin-top: 75px;
+		padding: 72px 20px;
+	}
+	.caption-heading h2 {
+		margin-bottom: 56px;
 	}
 
 	.feedback-container {
@@ -162,6 +195,8 @@
 		margin-top: 16px;
 		padding: 19px 0;
 	}
-
+	.feedback-input {
+		margin-bottom: 16px;
+	}
 
 }

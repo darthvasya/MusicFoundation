@@ -76,6 +76,9 @@
 }
 
 @media (max-width: 991px) {
+    .benefits-of-music {
+        padding: 156px 20px;
+    }
     .benefits-of-music__body-bottom {
         grid-template-columns: repeat(2, 1fr);
     }

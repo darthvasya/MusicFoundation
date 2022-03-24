@@ -26,6 +26,11 @@ body {
   padding: 0 20px;
 }
 
+.row {
+  margin-right: -20px;
+  margin-left: -20px;
+}
+
 html {
   font-size: 16px;
 }
@@ -116,9 +121,7 @@ main {
 .secondary-quote .quote__title, .secondary-quote .quote__subtitle {
   color: var(--black);
 }
-.about-us .partners__body {
-  padding: 256px 0;
-}
+
 .impact .involved {
   padding-top: 0;
   padding-bottom: 256px;
@@ -130,9 +133,18 @@ main {
   }
 }
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+  .impact .involved {
+    padding-top: 0;
+    padding-bottom: 156px;
+  }
+}
 
 @media (max-width: 767px) {
+  .impact .involved {
+    padding-top: 0;
+    padding-bottom: 72px;
+  }
   body.lock {
     overflow: hidden;
   }
@@ -148,26 +160,22 @@ main {
   .content {
     padding: 83px 0 0 0;
   }
-
   .secondary-banner {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-image: url('../assets/img/about_us/banner.jpg');
-    background-size: cover;
     min-height: 140px;
-    padding: 0 20px;
   }
   .secondary-banner .image {
-    display: none;
+    min-height: 140px;
+  }
+  .secondary-banner .image img {
+    min-height: 140px;
   }
   .secondary-banner .description {
-    position: relative;
+    position: absolute;
     background-color: transparent;
     padding: 0;
-  }
-  .about-us .partners__body {
-    padding: 72px 0;
+    top: 50%;
+    transform: translate(0%, -25%);
+    padding: 0 20px;
   }
   .impact .involved {
     padding-top: 72;

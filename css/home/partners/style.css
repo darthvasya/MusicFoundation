@@ -13,6 +13,10 @@
 .partners {
     padding: 0 20px;
 }
+
+.about-us .partners {
+    padding: 256px 20px;
+}
 .partners__body {
     
 }
@@ -41,13 +45,18 @@
 }
 
 .partners__body-bottom .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: none;
     border-radius: 0;
     width: 100%;
+    background-color: #f1f1f1;
 }
 
-.partners__body-bottom .card-deck>div img {
+.partners__body-bottom .card img {
     width: 100%;
+    max-width: 200px;
     height: auto;
 }
 @media (max-width: 1199px) {
@@ -56,12 +65,21 @@
     }
 }
 @media (max-width: 991px) {
+    .about-us .partners {
+        padding: 156px 20px;
+    }
     .partners__body-bottom {
         grid-template-columns: repeat(4, 1fr);
     }
 }
 
 @media (max-width: 767px) {
+    .about-us .partners {
+        padding: 72px 20px;
+    }
+    .about-us .partners__body {
+        padding: 0;
+    }
     .partners__body-top {
         margin-bottom: 56px;
     }

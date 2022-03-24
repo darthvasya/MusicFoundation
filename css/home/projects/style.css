@@ -77,7 +77,7 @@
     text-align: left;
     font: normal normal normal 14px/20px var(--helvetica);
     letter-spacing: 0px;
-    color: var(--text-grey);
+    color: #DBDCDE;
     opacity: 1;
     margin-bottom: 40px;
 }
@@ -106,7 +106,12 @@
     border: 0px solid #fff
 }
 
-@media (max-width: 991px) {}
+@media (max-width: 991px) {
+    .projects {
+        padding: 156px 20px;
+        background-color: var(--white);
+    }
+}
 
 @media (max-width: 767px) {
     .projects {
