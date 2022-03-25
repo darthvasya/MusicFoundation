@@ -143,7 +143,7 @@
 	width: 14px;
 	height: 24px;
 	background-image: url("../../../assets/img/impact/arrow-prev.svg");
-	background-size: cover;
+	background-size: 100%;
 	transform: scale(-1, -1);
 	cursor: pointer;
 }
@@ -152,8 +152,23 @@
 	width: 14px;
 	height: 24px;
 	background-image: url("../../../assets/img/impact/arrow-next.svg");
-	background-size: cover;
+	background-size: 100%;
 	cursor: pointer;
+}
+.projects .carousel {
+	margin: 0 -20px;
+}
+.projects .carousel-item{
+	padding: 0 20px;
+}
+
+.projects__body-bottom .card-deck div {
+	border: none;
+}
+
+/* .projects .carousel.slide.app - test */
+.app {
+	display: none;
 }
 
 @media (max-width: 991px) {
@@ -172,7 +187,15 @@
 	}
 
 	.projects__body-top {
+		flex-direction: column;
+		margin-bottom: 0;
+	}
+	.projects__body-top .title {
 		margin-bottom: 56px;
+	}
+	.projects__body-top .secondary-button {
+		margin-bottom: 38px;
+		min-width: 100%;
 	}
 
 	.projects__body-bottom .img-wrapper {
@@ -199,5 +222,12 @@
 		grid-template-columns: repeat(1, 1fr);
 		grid-template-rows: repeat(1, 1fr);
 		grid-row-gap: 15px;
+	}
+/* .projects .ps and .carousel.slide.app - test */
+	.pc {
+		display: none;
+	}
+	.app {
+		display: initial;
 	}
 }
