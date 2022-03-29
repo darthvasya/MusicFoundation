@@ -23,14 +23,16 @@
 
 .general-section__body-left {
     width: 100%;
-    margin: 16px 16px 0 0;
+    /* margin: 16px 16px 0 0; */
     max-width: 632px;
+    overflow: hidden;
+    padding: 16px 16px 0 0;
 }
 .general-section__body-left img {
     width: 100%;
     min-width: 335px;
     height: auto;
-    box-shadow: 16px -16px var(--light-red);
+    /* box-shadow: 16px -16px var(--light-red); */
 }
 .general-section__body-right {
     display: flex;
@@ -61,7 +63,7 @@
     opacity: 1;
     margin-bottom: 24px;
 }
-.general-section__body-right-main p {
+.general-section__body-right-main p:last-of-type {
     margin-bottom: 0;
 }
 
