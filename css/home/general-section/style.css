@@ -10,7 +10,7 @@
 }
 
 .general-section {
-    padding: 256px 20px;
+    padding: 160px 20px;
     background-color: var(--white);
 }
 
@@ -68,9 +68,6 @@
 }
 
 @media (max-width: 991px) {
-    .general-section {
-        padding: 156px 20px;
-    }
     .general-section__body-right-head .title {
         margin-bottom: 48px;
     }

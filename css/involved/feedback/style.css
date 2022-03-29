@@ -1,5 +1,5 @@
 .feedback-section {
-	padding: 256px 20px;
+	padding: 160px 20px;
 }
 
 .feedback-container {
@@ -29,14 +29,22 @@
 	background: #f1f1f2;
 	border: none;
 	outline: none;
+	color: #000000;
+}
+.feedback-input::-webkit-input-placeholder, .feedback-textarea::-webkit-input-placeholder {
+    color: #000000;
+} 
+.feedback-input::-moz-placeholder, .feedback-textarea::-moz-placeholder {
+color: #000000;
 }
 
 .feedback-input:active {
-	outline: 2px solid #EC2227;
+	outline: 2px solid #bebebe;
 }
-
-
 .feedback-input:focus {
+	outline: 2px solid #bebebe;
+}
+.feedback-input.error {
 	outline: 2px solid #EC2227;
 }
 
@@ -53,11 +61,14 @@
 }
 
 .feedback-textarea:active {
-	outline: 2px solid #EC2227;
+	outline: 2px solid #bebebe;
 }
 
 
 .feedback-textarea:focus {
+	outline: 2px solid #bebebe;
+}
+.feedback-textarea.error {
 	outline: 2px solid #EC2227;
 }
 
@@ -151,6 +162,95 @@
 	color: #cc0000;
 }
 
+/* custom select */
+.select {
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.new-select {
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	width: 100%;
+	margin-bottom: 24px;
+	height: 46px;
+	padding: 16px;
+	font-family: "Helvetica", sans-serif;
+	font-size: 16px;
+	background: #f1f1f2;
+	border: none;
+	outline: none;
+	border: 2px solid #f1f1f2;
+}
+.new-select.on {
+	border: 2px solid #bebebe;
+}
+
+.new-select__list {
+    position: absolute;
+    top: 45px;
+    left: 0;
+    cursor: pointer;
+    width: 100%;
+    z-index: 2;
+    background: #f1f1f2;
+    user-select: none;
+	border: 2px solid #bebebe;
+	color: #000000;
+}
+
+.new-select__list.on {
+    display: block;
+}
+
+.new-select__item span {
+    display: block;
+    padding: 10px 15px;
+}
+.new-select__item:hover {
+	background-color: white;
+}
+
+.new-select__item span:hover {
+    color: #ec2227;
+}
+
+.new-select:after {
+    content: '';
+    display: block;
+    width: 9px;
+    height: 16px;
+    position: absolute;
+    right: 16px;
+    top: center;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='13.396' height='23.403' viewBox='0 0 13.396 23.403'%3E%3Cpath id='Path_5169' data-name='Path 5169' d='M23.349-9.47a.774.774,0,0,1,.159.477.572.572,0,0,1-.159.424L12.283,2.549a.774.774,0,0,1-.477.159.572.572,0,0,1-.424-.159L.264-8.57a.572.572,0,0,1-.159-.424A.774.774,0,0,1,.264-9.47l1.059-1.059a.572.572,0,0,1,.424-.159.774.774,0,0,1,.477.159L11.807-.945l9.583-9.583a.774.774,0,0,1,.477-.159.572.572,0,0,1,.424.159Z' transform='translate(10.687 23.508) rotate(-90)' fill='%23676767'/%3E%3C/svg%3E") no-repeat right center / cover;
+    opacity: 0.6;
+
+    -webkit-transition: all .27s ease-in-out;
+        -o-transition: all .27s ease-in-out;
+            transition: all .27s ease-in-out;
+
+	-webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+	-o-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.new-select.on:after {
+    -webkit-transform: rotate(270deg);
+        -ms-transform: rotate(270deg);
+         -o-transform: rotate(270deg);
+            transform: rotate(270deg);
+}
+
+/* custom select end*/
+
 @media (max-width: 1199px) {
 	.feedback-form,
 	.feedback-caption {
@@ -159,9 +259,6 @@
 }
 
 @media (max-width: 991px) {
-	.feedback-section {
-		padding: 156px 20px;
-	}
 	.feedback-form,
 	.feedback-caption {
 		max-width: 340px;

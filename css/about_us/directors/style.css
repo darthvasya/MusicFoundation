@@ -13,7 +13,7 @@
 }
 
 .directors {
-    padding: 256px 20px;
+    padding: 160px 20px;
     background-color: var(--black);
 }
 
@@ -86,8 +86,10 @@
 .directors__body-bottom .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     background-color: transparent;
+    height: 100%;
+    padding: 32px 0 0 32px;
 }
 
 .directors__body-bottom .card-deck {
@@ -109,9 +111,6 @@
 @media (max-width: 991px) {
     .directors__body-bottom .card-deck {
         grid-template-columns: repeat(2, 1fr);
-    }
-    .directors {
-        padding: 156px 20px;
     }
 }
 
@@ -147,5 +146,10 @@
     }
     .directors__body-bottom .img-wrapper {
         max-width: 95px;
+    }
+    .directors__body-bottom .card-body {
+        justify-content: center;
+        height: initial;
+        padding: 0 0 0 24px;
     }
 }
