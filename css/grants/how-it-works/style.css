@@ -11,7 +11,7 @@
 }
 
 .how-it-works {
-    padding: 256px 20px;
+    padding: 160px 20px;
     background-color: var(--black);
 }
 
@@ -144,10 +144,6 @@
 }
 
 @media (max-width: 991px) {
-    .how-it-works {
-        padding: 156px 0;
-    }
-
     .how-it-works__body-title {
         margin-bottom: 48px;
     }

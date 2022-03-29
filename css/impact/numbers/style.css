@@ -11,7 +11,7 @@
 }
 
 .numbers-section {
-	padding: 256px 20px;
+	padding: 160px 20px;
 	background-color: var(--black);
 }
 
@@ -24,9 +24,6 @@
 }
 
 @media (max-width: 991px) {
-	.numbers-section {
-		padding: 156px 20px;
-	}
 }
 
 @media (max-width: 767px) {
