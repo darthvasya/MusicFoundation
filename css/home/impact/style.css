@@ -8,6 +8,12 @@
     --dark-grey: #828282;
     --helvetica: 'Helvetica';
     --press-gothic: 'PressGothic';
+    --bg: #F1F1F2;
+}
+
+.impact {
+    padding: 160px 20px;
+    background-color: var(--bg);
 }
 
 .impact__top {
@@ -21,6 +27,7 @@
     align-items: center;
     max-width: 632px;
     padding: 0;
+    overflow: hidden;
 }
 
 .impact__body-right img {
@@ -107,10 +114,20 @@
     opacity: 1;
 }
 
+@media (max-width: 1199px) {
+    .impact__body-left {
+        padding: 0 108px 0 0;
+    }
+    
+}
+
 @media (max-width: 991px) {
     .impact__bottom  {
         grid-template-columns: repeat(2, 1fr);
         padding: 72px 20px;
+    }
+    .impact__body-left {
+        padding: 0 48px 0 0;
     }
 }
 

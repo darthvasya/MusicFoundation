@@ -12,7 +12,7 @@
 }
 
 .involved {
-    padding: 256px 20px 158px;
+    padding: 160px 20px;
 }
 
 .involved__body-top {
@@ -107,16 +107,6 @@
     max-width: initial;
 }
 
-.involved__body-bottom .secondary-button a {
-    padding: 0 16px;
-    background-color: var(--light-red);
-}
-
-.involved__body-bottom .secondary-button a:hover {
-    padding: 0 16px;
-    background-color: var(--black);
-}
-
 @media (max-width: 1199px) {
     .involved__body-bottom .card-text {
         padding-right: 0px;
@@ -124,9 +114,6 @@
 }
 
 @media (max-width: 991px) {
-    .involved {
-        padding: 156px 20px;
-    }
     .involved__body-bottom .card-text {
         padding-right: 0px;
     }

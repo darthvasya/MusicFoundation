@@ -11,7 +11,7 @@
 }
 
 .projects {
-    padding: 256px 20px;
+    padding: 160px 20px;
     background-color: var(--white);
 }
 
@@ -53,11 +53,13 @@
 .projects__body-bottom .img-wrapper {
     position: relative;
     width: 100%;
+    overflow: hidden;
 }
 
 .projects__body-bottom .img-wrapper img {
     width: 100%;
     height: auto;
+    z-index: 1;
 }
 
 .projects__body-bottom .img-wrapper .play {
@@ -68,6 +70,16 @@
     top: 50%;
     left: 50%;
     transform: translate(-25%, -25%);
+    z-index: 2;
+}
+.projects__body-bottom .img-wrapper .play + img {
+    transform: scale(1);
+    -webkit-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+
+.projects__body-bottom .img-wrapper .play:hover + img {
+    transform: scale(1.05);
 }
 
 .card-body {
@@ -118,10 +130,6 @@
 }
 
 @media (max-width: 991px) {
-    .projects {
-        padding: 156px 20px;
-        background-color: var(--white);
-    }
 }
 
 @media (max-width: 767px) {

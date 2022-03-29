@@ -14,7 +14,7 @@
 
 .media {
     background-color: var(--white);
-    padding: 256px 20px;
+    padding: 160px 20px;
 }
 
 .media__body {
@@ -131,8 +131,9 @@
 
 .media__body-bottom .card-body__footer span:last-child {
     border-bottom: solid 2px var(--dark-red);
-    -webkit-transition: all 0.6s ease 0s;
-    transition: all 0.6s ease 0s;
+    -webkit-transition: all 0.1s ease 0s;
+    transition: all 0.1s ease 0s;
+    min-width: 100px;
 }
 .media__body-bottom .card-body__footer span:last-child:hover {
     border-bottom: solid 2px transparent;
@@ -157,9 +158,6 @@
 }
 
 @media (max-width: 991px) {
-    .media {
-        padding: 156px 20px;
-    }
     .media__body-bottom .img-wrapper {
        display: none;
     }

@@ -27,7 +27,7 @@
     font-size: calc(40px + (24 + 24 * 0.7) * ((100vw - 767px) / 1920));
     line-height: calc(40px + (24 + 24 * 0.7) * ((100vw - 767px) / 1920));
     letter-spacing: 0px;
-    color: var(--light-red);
+    color: var(--white);
     text-transform: uppercase;
     opacity: 1;
 }
