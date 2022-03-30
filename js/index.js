@@ -129,5 +129,75 @@ $(document).ready(function() {
         });
     });
     // custom select end
+    
+    // owl Carousel
+    var owl = $('.owl-carousel');
+
+    const callback = (event) => {
+        const items = event.item.count;     // Number of items
+        const size = event.page.size;      // Number of items per page
+        const currentPageContainer = document.querySelector(".projects-page-current");
+        const allPagesContainer = document.querySelector(".projects-page-all");
+        const prevButton = document.querySelector('#owl-prev');
+        const nextButton = document.querySelector('#owl-next');
+        const allPages = Math.floor(items / size);
+        // const allPages = items;
+        const currentPage = event.page.index === -1 ? 1 : event.page.index + 1;
+        // const currentPage = event.item.index + 1;
+        // const emptySpace = size - ((items % size));
+
+        currentPageContainer.innerHTML = currentPage;
+        allPagesContainer.innerHTML = allPages;
+
+        if (currentPage === 1) {
+            prevButton.classList.add("disable");
+        } else {
+            prevButton.classList.remove("disable");
+        }
+
+        if (currentPage === allPages) {
+            nextButton.classList.add("disable");
+        } else {
+            nextButton.classList.remove("disable");
+        }
+    }
+
+    owl.owlCarousel({
+        margin: 16,
+        responsiveClass:true,
+        checkVisible: false,
+        onInitialized: callback,
+        onResized: callback,
+        responsive: {
+            0: {
+                items: 1,
+                slideBy: 1,
+            },
+            756: {
+                items: 3,
+                slideBy: 3,
+            },
+            1000: {
+                items: 3,
+                slideBy: 3,
+            }
+        }
+    });
+
+    // Go to the next item
+    $('.projects__ctrls-next').click(function(e) {
+        owl.trigger('next.owl.carousel', [300]);
+    })
+
+    // Go to the previous item
+    $('.projects__ctrls-prev').click(function(e) {
+        owl.trigger('prev.owl.carousel', [300]);
+    })
+
+    $('.owl-carousel').on('changed.owl.carousel', function(event) {
+        callback(event);
+    });
+    
+    // owl Carousel end
     AOS.init({once: true});
 });

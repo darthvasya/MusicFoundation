@@ -201,7 +201,9 @@ input#inputEmail:focus {
     .footer__body .subscribe .form-inline .primary-button {
         max-width: initial;
     }
-
+    .footer__body .subscribe .btn-primary {
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 991px) {

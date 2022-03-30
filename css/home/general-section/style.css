@@ -30,7 +30,7 @@
 }
 .general-section__body-left img {
     width: 100%;
-    min-width: 335px;
+    min-width: 319px;
     height: auto;
     /* box-shadow: 16px -16px var(--light-red); */
 }
@@ -84,9 +84,9 @@
     .general-section__body-right {
         padding-left: 0;
     }
-    .general-section__body-left {
+    /* .general-section__body-left {
         max-width: 100%;
-        margin: 16px 0 0 0;
+        margin: 16px 16px 0 0;
         padding-right: 16px;
-    }
+    } */
 }
