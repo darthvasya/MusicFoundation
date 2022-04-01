@@ -16,11 +16,10 @@ $(document).ready(function() {
 
             if ($(document).scrollTop() + windowHeight >= height) {
                 let counters = document.querySelectorAll(".value-number");
+                let countersSmall = document.querySelectorAll(".value-number-small");
                 const speed = 2000;
 
                 counters.forEach((counter) => {
-
-
                     const animate = () => {
                         const value = +counter.getAttribute("akhi");
                         const data = +counter.innerText;
@@ -31,6 +30,23 @@ $(document).ready(function() {
                         setTimeout(animate, 1);
                         } else {
                         counter.innerText = value;
+                        }
+                    };
+
+                    animate();
+                });
+
+                countersSmall.forEach((counter) => {
+                    const animate = () => {
+                        const value = +counter.getAttribute("akhi");
+                        const data = +counter.innerText;
+
+                        const time = value / speed;
+                        if (data < value) {
+                            counter.innerText = Math.ceil(data + time);
+                            setTimeout(animate, 5000);
+                        } else {
+                            counter.innerText = value;
                         }
                     };
 
@@ -122,6 +138,8 @@ $(document).ready(function() {
                 $(this).addClass('on');
                 selectList.slideDown(duration);
 
+                let options = document.querySelectorAll('.new-select__item');
+
                 selectItem.on('click', function() {
                     let chooseItem = $(this).data('value');
 
@@ -135,6 +153,10 @@ $(document).ready(function() {
                     let optionCurrent = document.querySelector('.new-select');
                     let options = document.querySelectorAll('.new-select__item');
                     // let optionsDropdown = document.querySelectorAll('.new-select__item');
+
+                    options.forEach((elem, index) => {
+                        elem.classList.remove('new-select__item-active');
+                    })
 
                     options.forEach((elem, index) => {
                         if (elem.firstChild.innerText === optionCurrent.innerText) {
