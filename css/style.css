@@ -19,9 +19,11 @@
 
 ::selection {
   background: var(--light-red);
+  color: #ffffff;
 }
 ::-moz-selection {
   background: var(--light-red);
+  color: #ffffff;
 }
 
 html,
