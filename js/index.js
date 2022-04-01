@@ -153,6 +153,16 @@ $(document).ready(function() {
                 selectList.slideUp(duration);
             }
         });
+        selectList.on('mouseleave', function () {
+            selectList.slideUp(duration);
+            selectHead.removeClass('on');
+
+            let options = document.querySelectorAll('.new-select__item');
+
+            options.forEach((elem, index) => {
+                elem.classList.remove('new-select__item-active');
+            })
+        })
     });
     // custom select end
 

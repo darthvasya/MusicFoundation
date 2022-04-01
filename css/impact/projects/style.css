@@ -103,7 +103,7 @@
 	background-color: rgba(87, 87, 87, 0.6) !important;
 }
 
-.new-select__list.on {
+.new-select__list:hover.on {
     display: block;
 }
 
