@@ -282,17 +282,42 @@ $(document).ready(function() {
         removeErrorClass(inputEmail)
     })
 
-    involvedInputName.addEventListener("input", () => {
-        removeErrorClass(involvedInputName)
-    })
+    if (involvedInputName && involvedInputEmail && involvedInputMessage && involvedSubmitButton) {
+        involvedInputName.addEventListener("input", () => {
+            removeErrorClass(involvedInputName)
+        })
+    
+        involvedInputEmail.addEventListener("input", () => {
+            removeErrorClass(involvedInputEmail)
+        })
+    
+        involvedInputMessage.addEventListener("input", () => {
+            removeErrorClass(involvedInputMessage)
+        })
 
-    involvedInputEmail.addEventListener("input", () => {
-        removeErrorClass(involvedInputEmail)
-    })
-
-    involvedInputMessage.addEventListener("input", () => {
-        removeErrorClass(involvedInputMessage)
-    })
+        involvedSubmitButton.addEventListener("click", (event) => {
+            event.preventDefault();
+    
+            
+            if (isUnValidEmail(involvedInputEmail)) {
+                involvedInputEmail.classList.add('error');
+            } 
+            
+            if (!involvedInputName.value) {
+                involvedInputName.classList.add('error');
+            }
+            
+            if (!involvedInputMessage.value) {
+                involvedInputMessage.classList.add('error');
+            }
+    
+            if (involvedInputName.value && involvedInputMessage.value && !isUnValidEmail(involvedInputEmail)) {
+                involvedInputEmail.classList.remove('error');
+    
+                alert('Submitted');
+            } 
+        })
+    }
     
     const removeErrorClass = (element) => {
         if (element.classList.contains("error")) {
@@ -306,36 +331,11 @@ $(document).ready(function() {
         } else {
             inputEmail.classList.remove('error')
 
-            if (isSuccessText) {
-                successText.classList.remove("hide");
-                setTimeout(() => {
-                    successText.classList.add("hide");
-                }, 5000)
-            }
+            successText.classList.remove("hide");
+            setTimeout(() => {
+                successText.classList.add("hide");
+            }, 5000)
         }
-    })
-
-    involvedSubmitButton.addEventListener("click", (event) => {
-        event.preventDefault();
-
-        
-        if (isUnValidEmail(involvedInputEmail)) {
-            involvedInputEmail.classList.add('error');
-        } 
-        
-        if (!involvedInputName.value) {
-            involvedInputName.classList.add('error');
-        }
-        
-        if (!involvedInputMessage.value) {
-            involvedInputMessage.classList.add('error');
-        }
-
-        if (involvedInputName.value && involvedInputMessage.value && !isUnValidEmail(involvedInputEmail)) {
-            involvedInputEmail.classList.remove('error');
-
-            alert('Submitted');
-        } 
     })
 
     const isUnValidEmail = (input) => {
