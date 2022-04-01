@@ -645,12 +645,14 @@
               <form class="form-inline">
                 <div class="form-group">
                   <label for="inputEmail" class="sr-only">Your e-mail</label>
-                  <input type="email" class="form-control" id="inputEmail" placeholder="Your e-mail">
+                  <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your e-mail">
                 </div>
-                <div type="submit" class="btn btn-primary primary-button">
-                  <a href="">SUBSCRIBE</a>
+                <div id="subscribeButton" type="submit" class="btn btn-primary primary-button">
+                  <a id="subscribeButtonLink" href="#">SUBSCRIBE</a>
                 </div>
               </form>
+
+              <p id="successText" class="form__success-text hide">Success subscribed</p>
             </div>
           </div>
           <div class="col-12 col-sm-12 col-lg-6 logo p-0">

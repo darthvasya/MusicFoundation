@@ -200,4 +200,38 @@ $(document).ready(function() {
     
     // owl Carousel end
     AOS.init({once: true, duration: 300});
+
+
+    // Validation email in footer
+   
+    const subscribeButton = document.getElementById("subscribeButton");
+    const inputEmail = document.getElementById("inputEmail");
+    const successText = document.getElementById("successText");
+    const subscribeButtonLink =  document.getElementById("subscribeButtonLink");
+
+    subscribeButtonLink.addEventListener("click", (event) => {
+        event.preventDefault()
+    });
+
+    inputEmail.addEventListener("input", () => {
+        if (inputEmail.classList.contains('error')) {
+            inputEmail.classList.remove("error");
+        }
+    })
+
+    subscribeButton.addEventListener("click", () => {
+        if (emailTest(inputEmail)) {
+            inputEmail.classList.add('error')
+        } else {
+            inputEmail.value = "";
+            successText.classList.remove("hide");
+            setTimeout(() => {
+                successText.classList.add("hide");
+            }, 5000)
+        }
+
+        function emailTest(input) {
+            return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+        }
+    })
 });
