@@ -93,7 +93,7 @@ $(document).ready(function() {
         _this.wrap('<div class="select"></div>');
         $('<div>', {
             class: 'new-select',
-            text: _this.children('option:disabled').text()
+            text: _this.children('option:selected').text()
         }).insertAfter(_this);
 
         const selectHead = _this.next('.new-select');
@@ -102,7 +102,7 @@ $(document).ready(function() {
         }).insertAfter(selectHead);
 
         const selectList = selectHead.next('.new-select__list');
-        for (let i = 1; i < selectOptionLength; i++) {
+        for (let i = 0; i < selectOptionLength; i++) {
             $('<div>', {
                 class: 'new-select__item',
                 html: $('<span>', {
@@ -128,7 +128,25 @@ $(document).ready(function() {
 
                     selectList.slideUp(duration);
                     selectHead.removeClass('on');
+
+                    let options = document.querySelectorAll('.new-select__item');
+
+                    options.forEach((elem, index) => {
+                        elem.classList.remove('new-select__item-active');
+                    })
                 });
+
+
+
+                let optionCurrent = document.querySelector('.new-select');
+                let options = document.querySelectorAll('.new-select__item');
+                // let optionsDropdown = document.querySelectorAll('.new-select__item');
+
+                options.forEach((elem, index) => {
+                    if (elem.firstChild.innerText === optionCurrent.innerText) {
+                        elem.classList.add('new-select__item-active');
+                    }
+                })
 
             } else {
                 $(this).removeClass('on');
