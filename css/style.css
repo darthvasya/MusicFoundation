@@ -74,7 +74,7 @@ main {
   min-width: 178px;
   height: 44px;
 
-  border: 2px solid var(--light-red);
+  outline: 2px solid var(--light-red);
 
   background: linear-gradient(to top, transparent 50%, var(--light-red) 50%);
   background-size: 100% 200%;
@@ -92,7 +92,7 @@ main {
   width: 100%;
   max-width: 178px;
   min-width: 178px;
-  height: 48px;
+  height: 44px;
 
   outline: 2px solid var(--light-red);
 

@@ -243,12 +243,18 @@
                   <h5>Join our newsletter</h5>
                   <div class="form">
                     <form class="form-inline">
-                      <div class="form-group">
-                        <label for="inputEmail" class="sr-only">Your e-mail</label>
-                        <input type="email" class="form-control" id="inputEmail" placeholder="Your e-mail">
-                      </div>
-                      <button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+                        <div class="form-group">
+                            <label for="inputEmail" class="sr-only">Your e-mail</label>
+                            <input class="form-control" id="inputEmail" name="inputEmail" placeholder="Your e-mail">
+                        </div>
+
+                        <div id="subscribeButton" type="submit" class="btn btn-primary primary-button">
+                            <a id="subscribeButtonLink" href="#">SUBSCRIBE</a>
+                        </div>
+                        <!-- <button id="subscribeButton" type="submit" class="btn btn-primary">SUBSCRIBE</button> -->
                     </form>
+
+                    <p id="successText" class="form__success-text hide">Success subscribed</p>
                   </div>
                 </div>
                 <div class="col-12 col-sm-12 col-lg-6 logo p-0">

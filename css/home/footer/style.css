@@ -87,6 +87,7 @@ input#inputEmail:focus {
 .footer__body .subscribe .btn-primary {
     width: 100%;
     max-width: 178px;
+    height: 44px;
     padding: 16px;
     text-align: center;
     font: normal normal bold 14px/16px var(--helvetica-bold);

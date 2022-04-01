@@ -266,7 +266,11 @@ $(document).ready(function() {
     // Validation email in footer
    
     const subscribeButton = document.getElementById("subscribeButton");
+    const involvedSubmitButton = document.getElementById("involvedSubmitButton");
     const inputEmail = document.getElementById("inputEmail");
+    const involvedInputEmail = document.getElementById("involvedInputEmail");
+    const involvedInputName = document.getElementById("involvedInputName");
+    const involvedInputMessage = document.getElementById("involvedInputMessage");
     const successText = document.getElementById("successText");
     const subscribeButtonLink =  document.getElementById("subscribeButtonLink");
 
@@ -275,26 +279,68 @@ $(document).ready(function() {
     });
 
     inputEmail.addEventListener("input", () => {
-        if (inputEmail.classList.contains('error')) {
-            inputEmail.classList.remove("error");
-        }
+        removeErrorClass(inputEmail)
     })
+
+    involvedInputName.addEventListener("input", () => {
+        removeErrorClass(involvedInputName)
+    })
+
+    involvedInputEmail.addEventListener("input", () => {
+        removeErrorClass(involvedInputEmail)
+    })
+
+    involvedInputMessage.addEventListener("input", () => {
+        removeErrorClass(involvedInputMessage)
+    })
+    
+    const removeErrorClass = (element) => {
+        if (element.classList.contains("error")) {
+            element.classList.remove("error");
+        }
+    }
 
     subscribeButton.addEventListener("click", () => {
-        if (emailTest(inputEmail)) {
+        if (isUnValidEmail(inputEmail)) {
             inputEmail.classList.add('error')
         } else {
-            inputEmail.value = "";
-            successText.classList.remove("hide");
-            setTimeout(() => {
-                successText.classList.add("hide");
-            }, 5000)
-        }
+            inputEmail.classList.remove('error')
 
-        function emailTest(input) {
-            return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+            if (isSuccessText) {
+                successText.classList.remove("hide");
+                setTimeout(() => {
+                    successText.classList.add("hide");
+                }, 5000)
+            }
         }
     })
+
+    involvedSubmitButton.addEventListener("click", (event) => {
+        event.preventDefault();
+
+        
+        if (isUnValidEmail(involvedInputEmail)) {
+            involvedInputEmail.classList.add('error');
+        } 
+        
+        if (!involvedInputName.value) {
+            involvedInputName.classList.add('error');
+        }
+        
+        if (!involvedInputMessage.value) {
+            involvedInputMessage.classList.add('error');
+        }
+
+        if (involvedInputName.value && involvedInputMessage.value && !isUnValidEmail(involvedInputEmail)) {
+            involvedInputEmail.classList.remove('error');
+
+            alert('Submitted');
+        } 
+    })
+
+    const isUnValidEmail = (input) => {
+        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
+    }
 });
 
 

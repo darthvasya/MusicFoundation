@@ -177,16 +177,17 @@
 				<div class="feedback-container">
 					<div class="feedback-form">
 						<form data-aos="fade-up" data-aos-duration="800">
-							<input type="text" class="feedback-input" placeholder="Name">
-							<input type="text" class="feedback-input" placeholder="E-mail">
+							<input type="text" class="feedback-input" id="involvedInputName" placeholder="Name">
+							<input type="text" class="feedback-input" id="involvedInputEmail" placeholder="E-mail">
 							<select class="select" name="reason">
 								<option>Reason</option>
 								<option value="Value 1">Value 1</option>
 								<option value="Value 2">Value 2</option>
 								<option value="Value 3">Value 3</option>
 							</select>
-							<textarea class="feedback-textarea" placeholder="Type your message here"></textarea>
-							<button type="submit" class="btn feedback-button">SUBMIT</button>
+							<textarea class="feedback-textarea" id="involvedInputMessage" placeholder="Type your message here"></textarea>
+							<button id="involvedSubmitButton" class="btn feedback-button">SUBMIT</button>
+							<!-- <button type="submit" class="btn feedback-button">SUBMIT</button> -->
 						</form>
 					</div>
 					<div class="feedback-caption">
@@ -292,10 +293,16 @@
 						<form class="form-inline">
 							<div class="form-group">
 								<label for="inputEmail" class="sr-only">Your e-mail</label>
-								<input type="email" class="form-control" id="inputEmail" placeholder="Your e-mail">
+								<input class="form-control" id="inputEmail" name="inputEmail" placeholder="Your e-mail">
 							</div>
-							<button type="submit" class="btn btn-primary">SUBSCRIBE</button>
+
+							<div id="subscribeButton" type="submit" class="btn btn-primary primary-button">
+								<a id="subscribeButtonLink" href="#">SUBSCRIBE</a>
+							</div>
+							<!-- <button id="subscribeButton" type="submit" class="btn btn-primary">SUBSCRIBE</button> -->
 						</form>
+
+						<p id="successText" class="form__success-text hide">Success subscribed</p>
 					</div>
 				</div>
 				<div class="col-12 col-sm-12 col-md-6 logo">
