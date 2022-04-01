@@ -17,13 +17,27 @@
   box-sizing: border-box;
 }
 
+::selection {
+  background: var(--light-red);
+  color: #ffffff;
+}
+::-moz-selection {
+  background: var(--light-red);
+  color: #ffffff;
+}
+
 html,
 body {
   height: 100%;
 }
 
 .container {
+  position: relative;
   padding: 0 20px;
+}
+
+.banner .container {
+  position: unset;
 }
 
 .row {
@@ -51,7 +65,7 @@ main {
   padding: 88px 0 0 0;
 }
 
-.secondary-button, .primary-button {
+.secondary-button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -60,12 +74,37 @@ main {
   min-width: 178px;
   height: 44px;
 
-  outline: 2px solid var(--light-red);
-  -webkit-transition: all 0.5s ease 0s;
-  transition: all 0.5s ease 0s;
+  border: 2px solid var(--light-red);
+
+  background: linear-gradient(to top, transparent 50%, var(--light-red) 50%);
+  background-size: 100% 200%;
+  background-position: bottom left;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all .2s ease-out;
   position: relative;
-  overflow: hidden;  
+  overflow: hidden;
 }
+
+.primary-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 178px;
+  min-width: 178px;
+  height: 48px;
+
+  outline: 2px solid var(--light-red);
+
+  background: linear-gradient(to top, var(--light-red) 50%, var(--black) 50%);
+  background-size: 100% 200%;
+  background-position: bottom left;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all .2s ease-out;
+  position: relative;
+  overflow: hidden;
+}
+
 .secondary-button a, .primary-button a {
   display: flex;
   justify-content: center;
@@ -87,41 +126,14 @@ main {
   transition: all 0.5s ease 0s;
 }
 
-.primary-button {
-  outline: solid 2px var(--light-red);
-}
-.primary-button:hover {
+
+.primary-button:hover{
+  background-position: top left;
   outline: solid 2px var(--black);
 }
 
-.primary-button:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(to right, var(--black) 0%, var(--black) 50%, var(--light-red) 50%, var(--light-red) 100%);
-  transition: left .5s;
-}
-.primary-button:hover:before{
-  left: 0;
-  background: linear-gradient(to right, var(--black) 0%, var(--black) 51%, var(--light-red) 51%, var(--light-red) 100%);
-}
-
-.secondary-button:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(to right, var(--light-red) 0%, var(--light-red) 50%, transparent 50%, transparent 100%);
-  transition: left .5s;
-}
-.secondary-button:hover:before{
-  left: 0;
-  background: linear-gradient(to right, var(--light-red) 0%, var(--light-red) 51%, transparent 51%, transparent 100%);
+.secondary-button:hover{
+  background-position: top left;
 }
 
 .secondary-button:hover a{
@@ -154,7 +166,7 @@ main {
 
 .secondary-quote {
   background-color: var(--grey-bg);
-} 
+}
 .secondary-quote .quote__title, .secondary-quote .quote__subtitle {
   color: var(--black);
 }
@@ -178,24 +190,105 @@ main {
 @keyframes animate-img-shadow {
   0% {
     box-shadow: 0px 0px var(--light-red);
-  } 
+  }
   100% {
     box-shadow: 16px -16px var(--light-red);
   }
 }
+/*.animate-img {*/
+/*  !*box-shadow: 0px 0px var(--light-red);*!*/
+/*  !*margin-left: -200%;*!*/
+/*  box-shadow: 16px -16px var(--light-red);*/
+/*}*/
+
+/* Image with background animation*/
+.animate-img-wrapper {
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  overflow: hidden;
+}
+
 .animate-img {
-  box-shadow: 0px 0px var(--light-red);
-  margin-left: -200%;
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
 }
-.animate-img.show {
-  animation: animate-img 0.6s linear forwards, animate-img-shadow 0.4s linear 0.6s forwards;
+
+.animate-container.show .animate-img-wrapper, .animate-container.show .animate-img {
+  transform: translateX(0);
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
 }
-.animate-secondary-img {
-  margin-left: -200%;
+
+.animate-img-bg {
+  position: relative;
 }
-.animate-secondary-img.show {
-  animation: animate-img 0.6s linear forwards;
+
+.animate-img-bg:before {
+  content: '';
+  position: absolute;
+  left: 16px;
+  right: 100%;
+  bottom: 16px;
+  top: -16px;
+  transition: 0.5s 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
 }
+
+.animate-container .animate-img-bg:before {
+  background-color: var(--light-red);
+}
+
+.animate-container.show .animate-img-bg:before{
+  right: -16px;
+  transition: 0.5s;
+}
+
+.animate-container.show .animate-img-wrapper, .animate-container.show .animate-img-bg {
+  transform: translateX(0);
+  transition: transform 0.5s 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
+}
+/* ################## */
+
+/* /* Image without background animation*/
+.animate-img-wrapper-right {
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  overflow: hidden;
+}
+
+.animate-img-right {
+  transform: translateX(100%);
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
+}
+
+.animate-container.show .animate-img-wrapper-right, .animate-container.show .animate-img-right {
+  transform: translateX(0);
+  transition: transform 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
+}
+
+.animate-container.show .animate-img-wrapper-right {
+  transform: translateX(0);
+  transition: transform 0.5s 0.5s;
+  transition-timing-function: cubic-bezier(.85,0,.15,1);
+}
+/* ################## */
+
+
+/*.animate-img.show {*/
+/*  animation: animate-img 0.6s linear forwards, animate-img-shadow 0.4s linear 0.6s forwards;*/
+/*}*/
+/*.animate-secondary-img {*/
+/*  margin-left: -200%;*/
+/*}*/
+/*.animate-secondary-img.show {*/
+/*  animation: animate-img 0.6s linear forwards;*/
+/*}*/
 /* animate img end*/
 
 .owl-dots {
@@ -253,7 +346,7 @@ main {
     padding: 0 20px;
   }
   .impact .involved {
-    padding-top: 72;
+    padding-top: 72px;
     padding-bottom: 72px;
   }
 }

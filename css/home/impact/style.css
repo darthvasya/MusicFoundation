@@ -18,7 +18,7 @@
 
 .impact__top {
     padding: 0 0 88px;
-    border-bottom: 1px solid #676767;
+    /*border-bottom: 1px solid #676767;*/
 }
 
 .impact__body-right {
@@ -118,7 +118,7 @@
     .impact__body-left {
         padding: 0 108px 0 0;
     }
-    
+
 }
 
 @media (max-width: 991px) {

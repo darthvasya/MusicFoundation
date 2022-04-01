@@ -18,7 +18,20 @@
     justify-content: stretch;
     align-items: flex-start;
     padding: 0 0 88px;
-    border-bottom: 1px solid #676767;
+    /*border-bottom: 1px solid #676767;*/
+}
+
+.divider {
+    position: absolute;
+    left: 0;
+    width: 0;
+    border-top: 1px solid #676767;
+    -webkit-transition: width 0.8s ease-out;
+    transition: width 0.8s  ease-out;
+}
+
+.divider-grow {
+    width: 100%;
 }
 
 .music-matters__top-left {
