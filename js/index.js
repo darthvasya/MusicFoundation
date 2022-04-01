@@ -263,7 +263,7 @@ $(document).ready(function() {
     AOS.init({once: true, duration: 300});
 
 
-    // Validation email in footer
+    // Validation email in footer and validate for for involved
    
     const subscribeButton = document.getElementById("subscribeButton");
     const involvedSubmitButton = document.getElementById("involvedSubmitButton");
