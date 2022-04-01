@@ -107,12 +107,13 @@
     -ms-flex-positive: 1;
     min-width: 178px;
     z-index: 2;
-
-    background-color: var(--light-red);
-    -webkit-transition: all 0.5s ease 0s;
-    transition: all 0.5s ease 0s;
+    background: linear-gradient(to top, var(--light-red) 50%, var(--black) 50%);
+    background-size: 100% 200%;
+    background-position: bottom left;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all .2s ease-out;
     position: relative;
-    overflow: hidden;  
+    overflow: hidden;
 }
 
 .heder__button a {
@@ -132,24 +133,9 @@
     position: relative;
 }
 
-.heder__button:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(to right, var(--black) 0%, var(--black) 50%, var(--light-red) 50%, var(--light-red) 100%);
-  transition: left .5s;
+.heder__button:hover{
+    background-position: top left;
 }
-.heder__button:hover:before{
-  left: 0;
-  background: linear-gradient(to right, var(--black) 0%, var(--black) 51%, var(--light-red) 51%, var(--light-red) 100%);
-}
-
-/* .heder__button a:hover {
-    background-color: var(--black);
-} */
 
 .header__list {
     display: -webkit-box;

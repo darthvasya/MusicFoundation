@@ -18,6 +18,7 @@
 .how-it-works__body {
     margin-right: -20px;
     margin-left: -20px;
+    position: relative;
 }
 
 .how-it-works__body-title {
@@ -39,7 +40,20 @@
     grid-template-columns: repeat(2, 1fr);
     padding-top: 48px;
     margin-bottom: 86px;
+    /*border-top: 1px solid #676767;*/
+}
+
+.divider {
+    position: absolute;
+    left: 0;
+    width: 0;
     border-top: 1px solid #676767;
+    -webkit-transition: width 0.8s ease-out;
+    transition: width 0.8s  ease-out;
+}
+
+.divider-grow {
+    width: 100%;
 }
 
 .how-it-works__body-step:last-child {

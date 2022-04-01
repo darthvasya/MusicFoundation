@@ -10,7 +10,7 @@
 }
 
 .quote {
-    padding: 126px 20px;
+    padding: 104px 20px;
     background-color: var(--black);
 }
 
@@ -28,7 +28,7 @@
 }
 
 .quote .quote__title {
-    text-align: left;
+    text-align: center;
     font: normal normal normal 32px/48px var(--helvetica);
     font-size: calc(24px + (8 + 8 * 0.7) * ((100vw - 767px) / 1920));
     line-height: calc(32px + (16 + 16 * 0.7) * ((100vw - 767px) / 1920));
