@@ -36,6 +36,10 @@
     color: var(--black);
 }
 
+.directors__body-bottom {
+    width: 100%;
+}
+
 .directors__body-bottom div{
     background-color: transparent;
 }
@@ -90,6 +94,7 @@
     background-color: transparent;
     height: 100%;
     padding: 32px 0 0 32px;
+    max-width: 230px;
 }
 
 .directors__body-bottom .card-deck {
@@ -103,6 +108,10 @@
 }
 
 @media (max-width: 1199px) {
+    .directors__body-bottom .card-body {
+        max-width: 100%;
+    }
+
     .directors__body-bottom .card-deck {
         grid-template-columns: repeat(2, 1fr);
     }

@@ -69,17 +69,24 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-25%, -25%);
+    transform: scale(1) translate(-50%, -50%);
     z-index: 2;
-}
-.projects__body-bottom .img-wrapper .play + img {
-    transform: scale(1.01);
-    -webkit-transition: all 0.4s ease 0s;
-    transition: all 0.4s ease 0s;
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
 }
 
-.projects__body-bottom .img-wrapper .play:hover + img {
+.projects__body-bottom .img-wrapper .video {
+    transform: scale(1.01);
+    -webkit-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.projects__body-bottom .img-wrapper:hover .video {
     transform: scale(1.05);
+}
+
+.projects__body-bottom .img-wrapper .play:hover {
+    transform: scale(1.05) translate(-50%, -50%);
 }
 
 .card-body {

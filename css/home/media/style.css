@@ -131,9 +131,8 @@
 
 .media__body-bottom .card-body__footer span:last-child {
     border-bottom: solid 2px var(--dark-red);
-    -webkit-transition: all 0.1s ease 0s;
-    transition: all 0.1s ease 0s;
-    min-width: 100px;
+    -webkit-transition: all 0.2s ease 0s;
+    transition: all 0.2s ease 0s;
 }
 .media__body-bottom .card-body__footer span:last-child:hover {
     border-bottom: solid 2px transparent;

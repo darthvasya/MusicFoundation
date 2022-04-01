@@ -44,8 +44,8 @@
     display: flex;
     width: 100%;
     max-width: calc((100vw / 100) * 50);
-    padding: 56px 16.66% 56px 56px;
-    padding-right: calc((100vh / 100) * 16.66);
+    padding: 56px 11.66% 56px 56px;
+    padding-right: calc((100vh / 100) * 11.66);
     text-align: left;
     font: normal normal normal 80px/80px var(--press-gothic);
     font-size: calc(48px + (32 + 32 * 0.7) * ((100vw - 767px) / 1920));

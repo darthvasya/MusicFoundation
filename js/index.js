@@ -199,5 +199,5 @@ $(document).ready(function() {
     });
     
     // owl Carousel end
-    AOS.init({once: true});
+    AOS.init({once: true, duration: 300});
 });
