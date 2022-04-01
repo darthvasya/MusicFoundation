@@ -82,7 +82,7 @@
 	border-top: none;
 	color: #000000;
 
-	max-height: 300px;
+	max-height: 240px;
 
 	overflow-y: auto !important;
 	overflow-x: hidden !important;
@@ -103,7 +103,7 @@
 	background-color: rgba(87, 87, 87, 0.6) !important;
 }
 
-.new-select__list:hover.on {
+.new-select__list.on {
     display: block;
 }
 

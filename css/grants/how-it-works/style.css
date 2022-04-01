@@ -147,14 +147,18 @@
     max-width: 139px;
 }
 
-.black .primary-button a {
-    outline: solid 1px var(--black);
-    background-color: var(--black);
+.black .primary-button {
+    background: linear-gradient(to top, var(--black) 50%, var(--light-red) 50%);
+    background-size: 100% 200%;
+    background-position: bottom left;
+    -webkit-transition: all 0.2s ease-out;
+    transition: all .2s ease-out;
+    outline: solid 2px var(--black);
 }
 
-.black .primary-button a:hover {
-    background-color: var(--light-red);
-    outline: solid 1px var(--light-red);
+.black .primary-button:hover {
+    background-position: top left;
+    outline: solid 2px var(--light-red);
 }
 
 @media (max-width: 991px) {

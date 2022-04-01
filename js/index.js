@@ -1,4 +1,6 @@
 $(document).ready(function() {
+
+
     $('.header__burger').click(function(event) {
         $('.header__burger,.header__menu,.header').toggleClass('active');
         $('body').toggleClass('lock');
@@ -127,42 +129,43 @@ $(document).ready(function() {
                     selectHead.text( $(this).find('span').text() );
 
                     selectList.slideUp(duration);
+                    selectHead.addClass('active-head');
                     selectHead.removeClass('on');
 
+                    let optionCurrent = document.querySelector('.new-select');
                     let options = document.querySelectorAll('.new-select__item');
+                    // let optionsDropdown = document.querySelectorAll('.new-select__item');
 
                     options.forEach((elem, index) => {
-                        elem.classList.remove('new-select__item-active');
+                        if (elem.firstChild.innerText === optionCurrent.innerText) {
+                            elem.classList.add('new-select__item-active');
+                        }
                     })
                 });
 
-
-
-                let optionCurrent = document.querySelector('.new-select');
-                let options = document.querySelectorAll('.new-select__item');
-                // let optionsDropdown = document.querySelectorAll('.new-select__item');
-
-                options.forEach((elem, index) => {
-                    if (elem.firstChild.innerText === optionCurrent.innerText) {
-                        elem.classList.add('new-select__item-active');
-                    }
-                })
+                // $('.new-select, .new-select__item').on('mouseleave', function (e) {
+                //     if (e.target.classList !== 'new-select__item' && e.target.classList !== 'new-select') {
+                //         console.log(e.target)
+                //         setTimeout(function () {
+                //
+                //             selectList.slideUp(duration);
+                //             selectHead.removeClass('on');
+                //
+                //             let options = document.querySelectorAll('.new-select__item');
+                //
+                //             options.forEach((elem, index) => {
+                //                 elem.classList.remove('new-select__item-active');
+                //             })
+                //         }, 500)
+                //     }
+                // })
 
             } else {
                 $(this).removeClass('on');
                 selectList.slideUp(duration);
             }
         });
-        selectList.on('mouseleave', function () {
-            selectList.slideUp(duration);
-            selectHead.removeClass('on');
 
-            let options = document.querySelectorAll('.new-select__item');
-
-            options.forEach((elem, index) => {
-                elem.classList.remove('new-select__item-active');
-            })
-        })
     });
     // custom select end
 
@@ -271,3 +274,5 @@ $(document).ready(function() {
         }
     })
 });
+
+
