@@ -138,6 +138,18 @@ $(document).ready(function() {
                 $(this).addClass('on');
                 selectList.slideDown(duration);
 
+                let selectHeading = document.querySelector('.new-select');
+
+                if (document.querySelector('.select').closest('form')) {
+                    if (selectHeading.innerText !== 'Reason') {
+                        selectHeading.innerText = 'Reason';
+                    }
+                } else {
+                    if (selectHeading.innerText !== 'ALL') {
+                        selectHeading.innerText = 'YEAR';
+                    }
+                }
+
                 let options = document.querySelectorAll('.new-select__item');
 
                 selectItem.on('click', function() {
@@ -165,22 +177,14 @@ $(document).ready(function() {
                     })
                 });
 
-                // $('.new-select, .new-select__item').on('mouseleave', function (e) {
-                //     if (e.target.classList !== 'new-select__item' && e.target.classList !== 'new-select') {
-                //         console.log(e.target)
-                //         setTimeout(function () {
-                //
-                //             selectList.slideUp(duration);
-                //             selectHead.removeClass('on');
-                //
-                //             let options = document.querySelectorAll('.new-select__item');
-                //
-                //             options.forEach((elem, index) => {
-                //                 elem.classList.remove('new-select__item-active');
-                //             })
-                //         }, 500)
-                //     }
-                // })
+                // start unhover behavior
+                document.querySelector('body').addEventListener('mouseover', (e) => {
+                    if (e.target.classList.contains('projects') || e.target.classList.contains('container') || e.target.classList.contains('projects__body-top') || e.target.tagName === 'IMG' || e.target.tagName === 'FORM' || e.target.classList.contains('feedback-container') || e.target.classList.contains('feedback-textarea') || e.target.classList.contains('feedback-section')) {
+                        selectList.slideUp(duration);
+                        selectHead.removeClass('on');
+                    }
+                });
+                // end unhover behavior
 
             } else {
                 $(this).removeClass('on');
@@ -264,7 +268,7 @@ $(document).ready(function() {
 
 
     // Validation email in footer and validate for for involved
-   
+
     const subscribeButton = document.getElementById("subscribeButton");
     const involvedSubmitButton = document.getElementById("involvedSubmitButton");
     const inputEmail = document.getElementById("inputEmail");
@@ -286,39 +290,39 @@ $(document).ready(function() {
         involvedInputName.addEventListener("input", () => {
             removeErrorClass(involvedInputName)
         })
-    
+
         involvedInputEmail.addEventListener("input", () => {
             removeErrorClass(involvedInputEmail)
         })
-    
+
         involvedInputMessage.addEventListener("input", () => {
             removeErrorClass(involvedInputMessage)
         })
 
         involvedSubmitButton.addEventListener("click", (event) => {
             event.preventDefault();
-    
-            
+
+
             if (isUnValidEmail(involvedInputEmail)) {
                 involvedInputEmail.classList.add('error');
-            } 
-            
+            }
+
             if (!involvedInputName.value) {
                 involvedInputName.classList.add('error');
             }
-            
+
             if (!involvedInputMessage.value) {
                 involvedInputMessage.classList.add('error');
             }
-    
+
             if (involvedInputName.value && involvedInputMessage.value && !isUnValidEmail(involvedInputEmail)) {
                 involvedInputEmail.classList.remove('error');
-    
+
                 alert('Submitted');
-            } 
+            }
         })
     }
-    
+
     const removeErrorClass = (element) => {
         if (element.classList.contains("error")) {
             element.classList.remove("error");

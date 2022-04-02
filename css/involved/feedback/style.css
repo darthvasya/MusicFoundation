@@ -229,11 +229,11 @@
     display: block;
     padding: 10px 15px;
 }
-.new-select__item:hover, .new-select__item-active {
+.new-select__item:hover {
 	background-color: white;
 }
 
-.new-select__item span:hover, .new-select__item-active span {
+.new-select__item-active span {
     color: #ec2227;
 }
 
@@ -258,12 +258,12 @@
 	transform: rotate(90deg);
 }
 
-.new-select.on:after {
-    -webkit-transform: rotate(270deg);
-        -ms-transform: rotate(270deg);
-         -o-transform: rotate(270deg);
-            transform: rotate(270deg);
-}
+/*.new-select.on:after {*/
+/*    -webkit-transform: rotate(270deg);*/
+/*        -ms-transform: rotate(270deg);*/
+/*         -o-transform: rotate(270deg);*/
+/*            transform: rotate(270deg);*/
+/*}*/
 
 .active-head {
 	color: #000000;
