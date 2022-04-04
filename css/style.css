@@ -324,24 +324,16 @@ main {
   }
 }
 
-.wrapper {
-  /* display: none; */
-  /* overflow: hidden;
-  height: 0; */
+html {
+  background: #1c2020;
 }
-.wrapper.block {
-  /* height: initial; */
-  /* display: block; */
-}
+
 body {
   overflow: hidden;
+  position: relative;
 }
-body.scroll {
-  overflow: auto;
-}
-body:before,
-body:after {
-  content: '';
+.body-before,
+.body-after {
   height: 51vh;
   width: 100%;
   position: fixed;
@@ -351,12 +343,12 @@ body:after {
 
 }
 
-body:before {
+.body-before {
   top: 51%;
   transform: translateY(-100%);
 }
 
-body:after {
+.body-after {
   bottom: 51%;
   transform: translateY(100%);
 }
@@ -412,6 +404,7 @@ body:after {
   background-color: #ed1b72;
   animation-delay: -0.3s;
 }
+/* ####### loader end ######## */
 
 
 @media (min-width: 1200px) {

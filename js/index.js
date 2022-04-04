@@ -23,47 +23,40 @@ $(document).ready(function() {
     // end burger
 
     // loader
+    gsap.registerPlugin();
 
     setTimeout(transition, 0);
 
     $('.js-trigger-transition').on('click', function(e) {
         const href =  e.currentTarget.href;
-        console.log(e.target)
         e.preventDefault();
         transitionClose(href);
     });
 
     function transition() {
-        var tl = new TimelineMax();
+        var tl = gsap.timeline();
 
-        tl.to(CSSRulePlugin.getRule('body:before'), 0.2, {cssRule: {top: '0%' }, ease: Power2.easeOut}, '+=1.5', 'open')
-        tl.to(CSSRulePlugin.getRule('body:after'), 0.2, {cssRule: {bottom: '0%' }, ease: Power2.easeOut}, '-=0.2', 'open')
+        tl.to('.body-before', 0.2, {top: '0%' , ease: Power2.easeOut}, '+=1.5', 'open')
+        tl.to('.body-after', 0.2, {bottom: '0%', ease: Power2.easeOut}, '-=0.2', 'open')
         tl.to($('.loader'), 0.2, {opacity: 0}, '-=0.2');
-        // $('.wrapper').addClass('block')
-        setTimeout(() => {
-            $('body').addClass('scroll')
-        }, 1600);
-        // $('body').addClass('scroll')
-
+        tl.to($('body'), 0.2, {overflow: "auto"}, '-=0.2');
+        
     }
 
     function transitionClose(href) {
-        var tl = new TimelineMax();
-        // tl.to($('body'), 0.2, {overflow: hidden}, 'close');
-        tl.to(CSSRulePlugin.getRule('body:before'), 0.2, {cssRule: {top: '51%' }, ease: Power2.easeOut}, 'close')
-        tl.to(CSSRulePlugin.getRule('body:after'), 0.2, {cssRule: {bottom: '51%' }, ease: Power2.easeOut}, 'close')
+        var tl = gsap.timeline();
+
+        tl.to('body', 0.2, {overflow: "hidden"}, 'close')
+        tl.to('.body-before', {top: '51%', ease: Power2.easeOut}, 'close')
+        tl.to('.body-after', {bottom: '51%', ease: Power2.easeOut}, 'close')
+        
         
         if(href) {
             setTimeout(() => {
-                // $('.wrapper').removeClass('block')
-                $('body').removeClass('scroll')
                 window.location.href = href
             }, 400);
         }
-
     }
-
-    // transition();
     // end loader
 
     var windowHeight = $(window).height();
