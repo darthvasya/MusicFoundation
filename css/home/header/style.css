@@ -371,6 +371,12 @@
         padding: 16px 0;
         margin: 0;
         width: 100%;
+        -webkit-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;
+        margin-left: -50%;
+    }
+    .header__list li.animate {
+        margin-left: 0;
     }
 
     .header__menu .header__list li:not(:last-child) {

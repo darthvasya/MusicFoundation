@@ -6,16 +6,27 @@ $(document).ready(function() {
         $('.header__burger,.header__menu,.header').toggleClass('active');
         $('.header__body').removeClass('show');
 
-
-        const useMyFunc = (el) => {
+        const animateHr = (el) => {
             el.toggleClass('animate');
         }
         $('.line').each(function(i, el) {
             let self = $(this);
-            console.log(i)
-            // const index = i + 1;
+
             setTimeout(function(){
-                useMyFunc(self);
+                animateHr(self);
+             }, 200 * ++i)
+            
+        });
+
+        const animateText = (el) => {
+            el.toggleClass('animate');
+        }
+        $('.header__list li').each(function(i, el) {
+            let self = $(this);
+            console.log(i)
+
+            setTimeout(function(){
+                animateText(self);
              }, 200 * ++i)
             
         });
