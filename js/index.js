@@ -1,13 +1,74 @@
 $(document).ready(function() {
 
-
+    // burger
     $('.header__burger').click(function(event) {
-        $('.header__burger,.header__menu,.header').toggleClass('active');
         $('body').toggleClass('lock');
+        $('.header__burger,.header__menu,.header').toggleClass('active');
+        $('.header__body').removeClass('show');
+
+
+        const useMyFunc = (el) => {
+            el.toggleClass('animate');
+        }
+        $('.line').each(function(i, el) {
+            let self = $(this);
+            console.log(i)
+            // const index = i + 1;
+            setTimeout(function(){
+                useMyFunc(self);
+             }, 200 * ++i)
+            
+        });
     })
+    // end burger
+
+    // loader
+
+    setTimeout(transition, 0);
+
+    $('.js-trigger-transition').on('click', function(e) {
+        const href =  e.currentTarget.href;
+        console.log(e.target)
+        e.preventDefault();
+        transitionClose(href);
+    });
+
+    function transition() {
+        var tl = new TimelineMax();
+
+        tl.to(CSSRulePlugin.getRule('body:before'), 0.2, {cssRule: {top: '0%' }, ease: Power2.easeOut}, '+=1.5', 'open')
+        tl.to(CSSRulePlugin.getRule('body:after'), 0.2, {cssRule: {bottom: '0%' }, ease: Power2.easeOut}, '-=0.2', 'open')
+        tl.to($('.loader'), 0.2, {opacity: 0}, '-=0.2');
+        // $('.wrapper').addClass('block')
+        setTimeout(() => {
+            $('body').addClass('scroll')
+        }, 1600);
+        // $('body').addClass('scroll')
+
+    }
+
+    function transitionClose(href) {
+        var tl = new TimelineMax();
+        // tl.to($('body'), 0.2, {overflow: hidden}, 'close');
+        tl.to(CSSRulePlugin.getRule('body:before'), 0.2, {cssRule: {top: '51%' }, ease: Power2.easeOut}, 'close')
+        tl.to(CSSRulePlugin.getRule('body:after'), 0.2, {cssRule: {bottom: '51%' }, ease: Power2.easeOut}, 'close')
+        
+        if(href) {
+            setTimeout(() => {
+                // $('.wrapper').removeClass('block')
+                $('body').removeClass('scroll')
+                window.location.href = href
+            }, 400);
+        }
+
+    }
+
+    // transition();
+    // end loader
 
     var windowHeight = $(window).height();
     let isQuoteAnimated = false;
+    let scrollPos = 0;
 
     $(document).on('scroll', function() {
         $('.block-number').each(function() {
@@ -89,6 +150,25 @@ $(document).ready(function() {
                 self.addClass('divider-grow');
             }
         });
+
+        // animate header height
+        
+        let st = $(this).scrollTop();
+        if (st > scrollPos) {
+            if (st > 300) {
+            $('.header__body').removeClass('show');
+            $('.header__body').addClass('hide');
+            }
+        } else {
+            const lock = document.querySelector('.lock');
+            if (!lock) {
+                $('.header__body').removeClass('hide');
+                $('.header__body').addClass('show');
+            }
+            
+        }
+        scrollPos = st;
+        
     });
     $('.animate-img, .animate-secondary-img').each(function() {
         let self = $(this),

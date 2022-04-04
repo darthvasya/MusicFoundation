@@ -74,8 +74,11 @@
 }
 
 .involved__body-bottom .card-title img {
-    float: right;
-    margin-left: 16px;
+    /* float: right;
+    margin-left: 16px; */
+    position: absolute;
+    right: 32px;
+    top: 32px;
 }
 
 .involved__body-bottom .card-title h5 {
@@ -87,6 +90,9 @@
     color: var(--white);
     text-transform: uppercase;
     opacity: 1;
+    min-width: 240px;
+    display: flex;
+    flex-shrink: 0;
 }
 
 .involved__body-bottom .card-text {
@@ -152,6 +158,10 @@
 
     .involved__body-bottom .card-deck {
         align-items: center;
+    }
+
+    .involved__body-bottom br {
+        display: none;
     }
 
     .involved__body-bottom {

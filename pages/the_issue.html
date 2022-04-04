@@ -27,12 +27,20 @@
 </head>
 
 <body>
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+        <div class="bar6"></div>
+      </div>
     <div class="wrapper the-issue">
 
         <header class="header">
             <div class="container">
                 <div class="header__body">
-                    <a class="header__logo" href="../index.html">
+                    <a class="header__logo js-trigger-transition" href="../index.html">
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
                             height="auto" viewBox="0 0 260 66.536">
                             <defs>
@@ -146,12 +154,12 @@
                     </div>
                     <nav class="header__menu">
                         <ul class="header__list">
-                            <li><a href="./about_us.html" class="header__link">About us</a></li>
-                            <li><a href="./the_issue.html" class="header__link active">The issue</a></li>
-                            <li><a href="./impact.html" class="header__link">Impact</a></li>
-                            <li><a href="./grants.html" class="header__link">Grant</a></li>
-                            <li><a href="" class="header__link">Shop</a></li>
-                            <li><a href="./involved.html" class="header__link">Get involved</a></li>
+                            <li><a href="./about_us.html" class="header__link js-trigger-transition">About us</a></li>
+                            <li><a href="./the_issue.html" class="header__link active js-trigger-transition">The issue</a></li>
+                            <li><a href="./impact.html" class="header__link js-trigger-transition">Impact</a></li>
+                            <li><a href="./grants.html" class="header__link js-trigger-transition">Grant</a></li>
+                            <li><a href="" class="header__link js-trigger-transition">Shop</a></li>
+                            <li><a href="./involved.html" class="header__link js-trigger-transition">Get involved</a></li>
                             <div class="nav__button">
                                 <a href="">DONATE</a>
                             </div>
@@ -420,7 +428,7 @@
                             <input class="form-control" id="inputEmail" name="inputEmail" placeholder="Your e-mail">
                         </div>
 
-                        <div id="subscribeButton" type="submit" class="btn btn-primary primary-button">
+                        <div id="subscribeButton" type="submit" class="primary-button">
                             <a id="subscribeButtonLink" href="#">SUBSCRIBE</a>
                         </div>
                         <!-- <button id="subscribeButton" type="submit" class="btn btn-primary">SUBSCRIBE</button> -->
@@ -443,7 +451,7 @@
                 <div class="col-12 col-sm-12 col-lg-6 nav p-0">
                   <ul class="footer-nav__list">
                     <li><a href="./about_us.html" class="footer-nav__link">About us</a></li>
-                    <li><a href="./the_issue.html" class="footer-nav__link active">The issue</a></li>
+                    <li><a href="./the_issue.html" class="footer-nav__link">The issue</a></li>
                     <li><a href="./impact.html" class="footer-nav__link">Impact</a></li>
                     <li><a href="./grants.html" class="footer-nav__link">Grant</a></li>
                     <li><a href="./shop.html" class="footer-nav__link">Shop</a></li>
@@ -485,6 +493,8 @@
     </script>
     <script defer src="../js/owl.carousel.min.js"></script>
     <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.12.1/plugins/CSSRulePlugin.min.js"></script>
     <script defer src="../js/index.js"></script>
 </body>
 

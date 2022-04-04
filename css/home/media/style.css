@@ -130,6 +130,7 @@
 }
 
 .media__body-bottom .card-body__footer span:last-child {
+    flex-shrink: 0;
     border-bottom: solid 2px var(--dark-red);
     -webkit-transition: all 0.2s ease 0s;
     transition: all 0.2s ease 0s;

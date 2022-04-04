@@ -79,6 +79,7 @@
 .feedback-button {
 	width: 100%;
 	max-width: 178px;
+	height: 48px;
 	padding: 16px 24px;
 	text-align: center;
 	font: normal normal bold 14px/16px var(--helvetica-bold);
@@ -99,7 +100,7 @@
 
 .feedback-button:hover {
 	background-position: top left;
-	outline: solid 2px var(--black);
+	/* outline: solid 2px var(--black); */
 }
 
 /*.feedback-button {*/

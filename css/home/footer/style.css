@@ -67,7 +67,7 @@
 }
 
 .footer__body .subscribe .form-group .form-control.error {
-  outline: 2px solid var(--light-red);
+  border: 2px solid var(--light-red);
 }
 
 input#inputEmail::-webkit-input-placeholder {
@@ -78,42 +78,28 @@ input#inputEmail::-moz-placeholder {
   color: #ffffff;
 }
 input#inputEmail:active {
-  outline: 2px solid #bebebe;
+  border: 2px solid #bebebe;
 }
 input#inputEmail:focus {
-  outline: 2px solid #bebebe;
+  border: 2px solid #bebebe;
 }
 
-.footer__body .subscribe .btn-primary {
-    width: 100%;
-    max-width: 178px;
-    height: 44px;
-    padding: 16px;
-    text-align: center;
-    font: normal normal bold 14px/16px var(--helvetica-bold);
-    letter-spacing: 0.9px;
-    color: var(--white);
-    text-transform: uppercase;
-    opacity: 1;
-    border: none;
-    border-radius: 0;
-    background: linear-gradient(to top, var(--light-red) 50%, var(--black) 50%);
+.footer__body .subscribe .primary-button {
+    background: linear-gradient(to top, var(--light-red) 50%, var(--dark-red) 50%);
     background-size: 100% 200%;
     background-position: bottom left;
     -webkit-transition: all 0.2s ease-out;
     transition: all .2s ease-out;
-    outline: 2px solid var(--light-red);
 }
 
-.footer__body .subscribe .btn-primary:hover{
+.footer__body .subscribe .primary-button:hover{
     background-position: top left;
 }
 
-.footer__body .subscribe .btn-primary:active {
+.footer__body .subscribe .primary-button:active {
     background-color: var(--black);
-    outline: 2px solid var(--light-red);
 }
-.footer__body .subscribe .btn-primary:focus {
+.footer__body .subscribe .primary-button:focus {
   box-shadow: none;
 }
 
@@ -198,9 +184,9 @@ input#inputEmail:focus {
   width: 64px;
   height: 64px;
   border-radius: 50%;
-  outline: solid 2px var(--light-red);
-  -webkit-transition: all 0.4s ease 0s;
-  transition: all 0.4s ease 0s;
+  border: solid 2px var(--light-red);
+  -webkit-transition: all 0.2s ease 0s;
+  transition: all 0.2s ease 0s;
 }
 .footer__body .social-links a:hover {
   background-color: var(--light-red);
@@ -235,7 +221,7 @@ input#inputEmail:focus {
 
 @media (max-width: 991px) {
   .footer {
-    padding: 56px 20px;
+    padding: 56px 20px 104px;
   }
 
   .footer__body .subscribe {
