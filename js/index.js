@@ -19,17 +19,27 @@ $(document).ready(function() {
                 let countersSmall = document.querySelectorAll(".value-number-small");
                 const speed = 2000;
 
+
+                function commify(n) {
+                    let parts = n.toString().split(".");
+                    const numberPart = parts[0];
+                    const decimalPart = parts[1];
+                    const thousands = /\B(?=(\d{3})+(?!\d))/g;
+                    return numberPart.replace(thousands, ",") + (decimalPart ? "." + decimalPart : "");
+                }
+
                 counters.forEach((counter) => {
                     const animate = () => {
                         const value = +counter.getAttribute("akhi");
-                        const data = +counter.innerText;
+                        const data = +(counter.innerText.split(',').join('').split('.').join(''));
 
                         const time = value / speed;
                         if (data < value) {
-                        counter.innerText = Math.ceil(data + time);
-                        setTimeout(animate, 1);
+                            let num = Math.ceil(data + time)
+                            counter.innerText = commify(Math.ceil(data + time));
+                            setTimeout(animate, 1);
                         } else {
-                        counter.innerText = value;
+                            counter.innerText = commify(value);
                         }
                     };
 
@@ -82,6 +92,15 @@ $(document).ready(function() {
             }
         });
         $('.divider').each(function() {
+            let self = $(this),
+                height = self.offset().top + (self.height() * 0,9);
+
+            if ($(document).scrollTop() + windowHeight >= height) {
+                self.addClass('divider-grow');
+            }
+        });
+
+        $('.divider-min').each(function() {
             let self = $(this),
                 height = self.offset().top + (self.height() * 0,9);
 
