@@ -246,7 +246,6 @@ $(document).ready(function() {
             let self = $(this),
                 height = self.offset().top + (self.height() * 0,9);
 
-            console.log(height)
 
             if ($(document).scrollTop() + windowHeight >= height) {
                 self.addClass('divider-grow');
