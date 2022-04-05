@@ -148,7 +148,7 @@
 }
 
 .black .primary-button {
-    background: linear-gradient(to top, var(--black) 50%, var(--light-red) 50%);
+    background: linear-gradient(to top, var(--black) 51%, var(--light-red) 51%);
     background-size: 100% 200%;
     background-position: bottom left;
     -webkit-transition: all 0.2s ease-out;

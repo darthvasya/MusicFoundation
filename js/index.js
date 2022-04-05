@@ -54,6 +54,7 @@ $(document).ready(function() {
         
     // }
     function transition() {
+        $('html').scrollTop(0);
         var tl = gsap.timeline();
         tl.to($('.loader'), 0.2, {opacity: 1, ease: Power2.easeOut}, '+=0', 'open');
         tl.to('.body-before', 0.2, {top: '0%' , ease: Power2.easeOut}, '+=1.5', 'open') // ease: Expo.easeOut
@@ -76,6 +77,7 @@ $(document).ready(function() {
     //         }, 400);
     //     }
     // }
+
     function transitionClose(href) {
         var tl = gsap.timeline();
 
@@ -189,20 +191,23 @@ $(document).ready(function() {
         // animate header height
         
         let st = $(this).scrollTop();
-        if (st > scrollPos) {
+
+        if ($(window).width() < 768) {
+            if (st > scrollPos) {
             if (st > 300) {
             $('.header__body').removeClass('show');
             $('.header__body').addClass('hide');
             }
-        } else {
-            const lock = document.querySelector('.lock');
-            if (!lock) {
-                $('.header__body').removeClass('hide');
-                $('.header__body').addClass('show');
+            } else {
+                const lock = document.querySelector('.lock');
+                if (!lock) {
+                    $('.header__body').removeClass('hide');
+                    $('.header__body').addClass('show');
+                }
+                
             }
-            
+            scrollPos = st;
         }
-        scrollPos = st;
 
         $('.divider-min').each(function() {
             let self = $(this),

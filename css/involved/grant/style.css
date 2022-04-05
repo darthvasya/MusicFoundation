@@ -40,7 +40,7 @@
 	margin-bottom: 0;
 }
 
-.grant_button button {
+/* .grant_button button {
 	width: 100%;
 	max-width: 178px;
 	padding: 16px 24px;
@@ -57,7 +57,7 @@
 
 .grant_button button:hover {
 	background-color: #000000;
-}
+} */
 
 @media (max-width: 767px) {
 	.grant .container {

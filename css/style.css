@@ -379,10 +379,9 @@ body {
   transform: translateY(-50%) translateX(-50%);
   z-index: 500;
   opacity: 0;
-  /* transition: opacity 0.3s; */
 }
 
-.loader>div {
+/* .loader>div {
   height: 100%;
   width: 8px;
   display: inline-block;
@@ -418,7 +417,7 @@ body {
 .loader .bar6 {
   background-color: #ed1b72;
   animation-delay: -0.3s;
-}
+} */
 /* ####### loader end ######## */
 
 
