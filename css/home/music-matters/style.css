@@ -135,9 +135,9 @@
         padding: 0;
         grid-template-columns: repeat(1, 1fr);
     }
-    .music-matters__because-item:first-child {
-        /*border-top: 1px solid #676767;*/
-    }
+    /* .music-matters__because-item:first-child {
+        border-top: 1px solid #676767;
+    } */
     .music-matters__because-item {
         padding: 40px 0;
         /*border-bottom: 1px solid #676767;*/

@@ -79,6 +79,9 @@
 }
 
 @media (max-width: 767px) {
+    .banner, .banner .image img, .banner .image {
+        max-height: initial;
+    }
     .banner {
         display: flex;
         flex-direction: column;

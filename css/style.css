@@ -21,6 +21,7 @@
   background: var(--light-red);
   color: #ffffff;
 }
+
 ::-moz-selection {
   background: var(--light-red);
   color: #ffffff;
@@ -72,9 +73,9 @@ main {
   width: 100%;
   max-width: 178px;
   min-width: 178px;
-  height: 44px;
+  height: 48px;
 
-  outline: 2px solid var(--light-red);
+  border: 2px solid var(--light-red);
 
   background: linear-gradient(to top, transparent 50%, var(--light-red) 50%);
   background-size: 100% 200%;
@@ -92,9 +93,7 @@ main {
   width: 100%;
   max-width: 178px;
   min-width: 178px;
-  height: 44px;
-
-  outline: 2px solid var(--light-red);
+  height: 48px;
 
   background: linear-gradient(to top, var(--light-red) 50%, var(--black) 50%);
   background-size: 100% 200%;
@@ -105,7 +104,8 @@ main {
   overflow: hidden;
 }
 
-.secondary-button a, .primary-button a {
+.secondary-button a,
+.primary-button a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,16 +127,15 @@ main {
 }
 
 
-.primary-button:hover{
-  background-position: top left;
-  outline: solid 2px var(--black);
-}
-
-.secondary-button:hover{
+.primary-button:hover {
   background-position: top left;
 }
 
-.secondary-button:hover a{
+.secondary-button:hover {
+  background-position: top left;
+}
+
+.secondary-button:hover a {
   color: var(--white);
 }
 
@@ -150,14 +149,17 @@ main {
   align-items: center;
   min-height: 320px;
 }
+
 .secondary-banner .image {
   min-height: 320px;
 }
+
 .secondary-banner .image img {
   min-height: 320px;
   object-fit: cover;
   width: 100%;
 }
+
 .secondary-banner .description {
   position: relative;
   background-color: transparent;
@@ -167,7 +169,9 @@ main {
 .secondary-quote {
   background-color: var(--grey-bg);
 }
-.secondary-quote .quote__title, .secondary-quote .quote__subtitle {
+
+.secondary-quote .quote__title,
+.secondary-quote .quote__subtitle {
   color: var(--black);
 }
 
@@ -182,43 +186,42 @@ main {
     opacity: 0;
     margin-left: -200%;
   }
+
   100% {
     opacity: 1;
     margin-left: 0;
   }
 }
+
 @keyframes animate-img-shadow {
   0% {
     box-shadow: 0px 0px var(--light-red);
   }
+
   100% {
     box-shadow: 16px -16px var(--light-red);
   }
 }
-/*.animate-img {*/
-/*  !*box-shadow: 0px 0px var(--light-red);*!*/
-/*  !*margin-left: -200%;*!*/
-/*  box-shadow: 16px -16px var(--light-red);*/
-/*}*/
 
 /* Image with background animation*/
 .animate-img-wrapper {
   transform: translateX(-100%);
   transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
   overflow: hidden;
 }
 
 .animate-img {
   transform: translateX(100%);
   transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
 }
 
-.animate-container.show .animate-img-wrapper, .animate-container.show .animate-img {
+.animate-container.show .animate-img-wrapper,
+.animate-container.show .animate-img {
   transform: translateX(0);
   transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
 }
 
 .animate-img-bg {
@@ -233,67 +236,177 @@ main {
   bottom: 16px;
   top: -16px;
   transition: 0.5s 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
 }
 
 .animate-container .animate-img-bg:before {
   background-color: var(--light-red);
 }
 
-.animate-container.show .animate-img-bg:before{
+.animate-container.show .animate-img-bg:before {
   right: -16px;
   transition: 0.5s;
 }
 
-.animate-container.show .animate-img-wrapper, .animate-container.show .animate-img-bg {
+.animate-container.show .animate-img-wrapper,
+.animate-container.show .animate-img-bg {
   transform: translateX(0);
   transition: transform 0.5s 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
 }
+
 /* ################## */
 
 /* /* Image without background animation*/
 .animate-img-wrapper-right {
   transform: translateX(-100%);
   transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
   overflow: hidden;
 }
 
 .animate-img-right {
   transform: translateX(100%);
   transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
 }
 
-.animate-container.show .animate-img-wrapper-right, .animate-container.show .animate-img-right {
+.animate-container.show .animate-img-wrapper-right,
+.animate-container.show .animate-img-right {
   transform: translateX(0);
   transition: transform 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
 }
 
 .animate-container.show .animate-img-wrapper-right {
   transform: translateX(0);
   transition: transform 0.5s 0.5s;
-  transition-timing-function: cubic-bezier(.85,0,.15,1);
+  transition-timing-function: cubic-bezier(.85, 0, .15, 1);
 }
+
 /* ################## */
 
+.donate-body-button {
+  display: none;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 48px;
+  position: fixed;
+  bottom: 0;
+  max-width: 100%;
+  z-index: 50;
 
-/*.animate-img.show {*/
-/*  animation: animate-img 0.6s linear forwards, animate-img-shadow 0.4s linear 0.6s forwards;*/
-/*}*/
-/*.animate-secondary-img {*/
-/*  margin-left: -200%;*/
-/*}*/
-/*.animate-secondary-img.show {*/
-/*  animation: animate-img 0.6s linear forwards;*/
-/*}*/
-/* animate img end*/
+  background: linear-gradient(to top, var(--light-red) 50%, var(--dark-red) 50%);
+  background-size: 100% 200%;
+  background-position: bottom left;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all .2s ease-out;
+}
 
 .owl-dots {
   display: none;
 }
+
+/* ####### loader ######## */
+@keyframes delay {
+
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.05);
+    -webkit-transform: scaleY(0.05);
+  }
+
+  20% {
+    transform: scaleY(1.0);
+    -webkit-transform: scaleY(1.0);
+  }
+}
+
+html {
+  background: #1c2020;
+}
+
+body {
+  overflow: hidden;
+  position: relative;
+}
+.body-before,
+.body-after {
+  height: 51vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background: #1c2020;
+  z-index: 400;
+
+}
+
+.body-before {
+  top: 51%;
+  transform: translateY(-100%);
+}
+
+.body-after {
+  bottom: 51%;
+  transform: translateY(100%);
+}
+
+.loader {
+  margin: 0 auto;
+  width: 60px;
+  height: 50px;
+  text-align: center;
+  font-size: 10px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  z-index: 500;
+  opacity: 1;
+}
+
+.loader>div {
+  height: 100%;
+  width: 8px;
+  display: inline-block;
+  float: left;
+  margin-left: 2px;
+  animation: delay 0.8s infinite ease-in-out;
+}
+
+.loader .bar1 {
+  background-color: #754fa0;
+}
+
+.loader .bar2 {
+  background-color: #09b7bf;
+  animation-delay: -0.7s;
+}
+
+.loader .bar3 {
+  background-color: #90d36b;
+  animation-delay: -0.6s;
+}
+
+.loader .bar4 {
+  background-color: #f2d40d;
+  animation-delay: -0.5s;
+}
+
+.loader .bar5 {
+  background-color: #fcb12b;
+  animation-delay: -0.4s;
+}
+
+.loader .bar6 {
+  background-color: #ed1b72;
+  animation-delay: -0.3s;
+}
+/* ####### loader end ######## */
+
 
 @media (min-width: 1200px) {
   .container {
@@ -309,12 +422,17 @@ main {
 }
 
 @media (max-width: 767px) {
+  .donate-body-button {
+    display: flex;
+  }
+
   .impact .involved {
     padding-top: 0;
     padding-bottom: 72px;
   }
+
   body.lock {
-    overflow: hidden;
+    overflow: hidden !important;
   }
 
   main {
@@ -328,15 +446,19 @@ main {
   .content {
     padding: 83px 0 0 0;
   }
+
   .secondary-banner {
     min-height: 140px;
   }
+
   .secondary-banner .image {
     min-height: 140px;
   }
+
   .secondary-banner .image img {
     min-height: 140px;
   }
+
   .secondary-banner .description {
     position: absolute;
     background-color: transparent;
@@ -345,6 +467,7 @@ main {
     transform: translate(0%, -25%);
     padding: 0 20px;
   }
+
   .impact .involved {
     padding-top: 72px;
     padding-bottom: 72px;

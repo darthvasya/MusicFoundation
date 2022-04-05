@@ -30,12 +30,22 @@
 </head>
 
 <body>
+  <div class="body-before"></div>
+  <div class="body-after"></div>
+  <div class="loader">
+    <div class="bar1"></div>
+    <div class="bar2"></div>
+    <div class="bar3"></div>
+    <div class="bar4"></div>
+    <div class="bar5"></div>
+    <div class="bar6"></div>
+  </div>
   <div class="wrapper home">
 
     <header class="header">
       <div class="container">
         <div class="header__body">
-          <a class="header__logo" href="./index.html">
+          <a class="header__logo js-trigger-transition" href="./index.html">
             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%"
               height="auto" viewBox="0 0 260 66.536">
               <defs>
@@ -146,12 +156,17 @@
           </div>
           <nav class="header__menu">
             <ul class="header__list">
-              <li><a href="./pages/about_us.html" class="header__link">About us</a></li>
-              <li><a href="./pages/the_issue.html" class="header__link">The issue</a></li>
-              <li><a href="./pages/impact.html" class="header__link">Impact</a></li>
-              <li><a href="./pages/grants.html" class="header__link">Grant</a></li>
-              <li><a href="./pages/shop.html" class="header__link">Shop</a></li>
-              <li><a href="./pages/involved.html" class="header__link">Get involved</a></li>
+              <li><a href="./pages/about_us.html" class="header__link js-trigger-transition">About us</a></li>
+              <div class="line"></div>
+              <li><a href="./pages/the_issue.html" class="header__link js-trigger-transition">The issue</a></li>
+              <div class="line"></div>
+              <li><a href="./pages/impact.html" class="header__link js-trigger-transition">Impact</a></li>
+              <div class="line"></div>
+              <li><a href="./pages/grants.html" class="header__link js-trigger-transition">Grant</a></li>
+              <div class="line"></div>
+              <li><a href="./pages/shop.html" class="header__link js-trigger-transition">Shop</a></li>
+              <div class="line"></div>
+              <li><a href="./pages/involved.html" class="header__link js-trigger-transition">Get involved</a></li>
               <div class="nav__button">
                 <a target="_blank" href="https://guitarcenterfoundation.kindful.com/">DONATE</a>
               </div>
@@ -191,7 +206,7 @@
             </div>
             <div class="music-matters__top-right col-6 d-none d-md-flex p-0" id="example-anchor">
               <div class="secondary-button">
-                <a href="./pages/the_issue.html">LEARN MORE</a>
+                <a href="./pages/the_issue.html" class="js-trigger-transition">LEARN MORE</a>
               </div>
             </div>
             <hr class="divider">
@@ -204,6 +219,7 @@
                 Children who study a musical instrument are more likely to excel in all other studies,
                 have enhanced critical thinking skills, and pursue higher education.
               </div>
+              <!-- <hr class="divider"> -->
             </div>
             <div class="music-matters__because-item">
               <hr class="divider-min">
@@ -212,6 +228,7 @@
                 Schools with music programs have an estimated 90.2% graduation
                 rate while schools without have an average rate of 72.9%.
               </div>
+              <!-- <hr class="divider"> -->
             </div>
             <div class="music-matters__because-item">
               <hr class="divider-min">
@@ -223,7 +240,7 @@
             </div>
           </div>
           <div class="secondary-button d-sm-flex d-md-none">
-            <a href="./pages/the_issue.html">LEARN MORE</a>
+            <a href="./pages/the_issue.html" class="js-trigger-transition">LEARN MORE</a>
           </div>
         </div>
       </div>
@@ -257,10 +274,10 @@
               </div>
               <div class="support__body-right-footer">
                 <div class="primary-button">
-                  <a href="./pages/apply.html">APPLY FOR GRANT</a>
+                  <a href="./pages/apply.html" class="js-trigger-transition">APPLY FOR GRANT</a>
                 </div>
                 <div class="secondary-button">
-                  <a href="./pages/about_us.html">LEARN MORE</a>
+                  <a href="./pages/about_us.html" class="js-trigger-transition">LEARN MORE</a>
                 </div>
               </div>
             </div>
@@ -289,7 +306,7 @@
               </div>
               <div class="impact__body-left-footer">
                 <div class="secondary-button">
-                  <a href="./pages/impact.html">LEARN MORE</a>
+                  <a href="./pages/impact.html" class="js-trigger-transition">LEARN MORE</a>
                 </div>
               </div>
             </div>
@@ -351,7 +368,7 @@
               <div class="title col-sm-12 col-md-6 p-0" data-aos="fade-up" data-aos-duration="800">OUR LATEST PROJECTS</div>
               <div class="col-6 d-none d-md-flex align-content-center justify-content-end p-0">
                 <div class="secondary-button">
-                  <a href="./pages/impact.html#projects">SEE ALL</a>
+                  <a href="./pages/impact.html#projects" class="js-trigger-transition">SEE ALL</a>
                 </div>
               </div>
             </div>
@@ -397,7 +414,7 @@
               </div>
             </div>
             <div class="secondary-button d-sm-flex d-md-none">
-              <a href="./pages/impact.html">LEARN MORE</a>
+              <a href="./pages/impact.html#projects" class="js-trigger-transition">LEARN MORE</a>
             </div>
           </div>
         </div>
@@ -602,12 +619,12 @@
               <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="center-bottom">
                 <div class="card-body">
                   <div class="card-title">
-                    <h5>MAKE A DONATION</h5>
+                    <h5>MAKE A<br/> DONATION</h5>
                     <img src="./assets/img/home/involved-1.svg" alt="">
                   </div>
-                  <p class="card-text">Our impact is made possible
-                    thanks to the generous support of people like you. Donations remain
-                    one of the most effective ways for us to expand our efforts.
+                  <p class="card-text">Our impact is made possible<br/>
+                    thanks to the generous support of<br/> people like you. Donations remain<br/>
+                    one of the most effective ways for<br/> us to expand our efforts.
                   </p>
                   <div class="secondary-button">
                     <a target="_blank" href="https://guitarcenterfoundation.kindful.com/">DONATE</a>
@@ -617,12 +634,12 @@
               <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="center-bottom">
                 <div class="card-body">
                   <div class="card-title">
-                    <h5>BECOME A VOLUNTEER</h5>
+                    <h5>BECOME A<br/> VOLUNTEER</h5>
                     <img src="./assets/img/home/involved-2.svg" alt="">
                   </div>
-                  <p class="card-text">We welcome volunteers who are
-                    passionate about contributing their time and talent
-                    to helping secure and expand access to the music community.
+                  <p class="card-text">We welcome volunteers who are<br/>
+                    passionate about contributing their<br/> time and talent
+                    to helping secure<br/> and expand access to the music<br/> community.
                   </p>
                   <div class="secondary-button">
                     <a href="">REGISTER</a>
@@ -632,11 +649,11 @@
               <div class="card" data-aos="fade-up" data-aos-duration="800" data-aos-anchor-placement="center-bottom">
                 <div class="card-body">
                   <div class="card-title">
-                    <h5>SPREAD THE WORD</h5>
+                    <h5>SPREAD<br/> THE WORD</h5>
                     <img src="./assets/img/home/involved-3.svg" alt="">
                   </div>
-                  <p class="card-text">Connecting and cultivating a diverse community of
-                    difference makers amplifies our ability to reach schools and in-need music education programs.
+                  <p class="card-text">Connecting and cultivating a<br/> diverse community of
+                    difference<br/> makers amplifies our ability to<br/> reach schools and in-need music<br/> education programs.
                   </p>
                   <div class="secondary-button">
                     <a href="">DOWNLOAD</a>
@@ -663,7 +680,7 @@
                   <input type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your e-mail">
                 </div>
 
-                <div id="subscribeButton" type="submit" class="btn btn-primary primary-button">
+                <div id="subscribeButton" type="submit" class="primary-button">
                   <a id="subscribeButtonLink" href="#">SUBSCRIBE</a>
                 </div>
                 <!-- <button id="subscribeButton" type="submit" class="btn btn-primary">SUBSCRIBE</button> -->
@@ -673,7 +690,7 @@
             </div>
           </div>
           <div class="col-12 col-sm-12 col-lg-6 logo p-0">
-            <a href="./index.html">
+            <a href="./index.html" class="js-trigger-transition">
               <img src="./assets/img/home/logo.svg" alt="">
             </a>
             <div class="copy d-sm-flex d-md-none">
@@ -685,13 +702,13 @@
           </div>
           <div class="col-12 col-sm-12 col-lg-6 nav p-0">
             <ul class="footer-nav__list">
-              <li><a href="./pages/about_us.html" class="footer-nav__link">About us</a></li>
-              <li><a href="./pages/the_issue.html" class="footer-nav__link">The issue</a></li>
-              <li><a href="./pages/impact.html" class="footer-nav__link">Impact</a></li>
-              <li><a href="./pages/grants.html" class="footer-nav__link">Grant</a></li>
-              <li><a href="./pages/shop.html" class="footer-nav__link">Shop</a></li>
-              <li><a href="" class="footer-nav__link">Media</a></li>
-              <li><a href="./pages/involved.html" class="footer-nav__link">Get involved</a></li>
+              <li></li>><a href="./pages/about_us.html" class="footer-nav__link js-trigger-transition">About us</a></li>
+              <li><a href="./pages/the_issue.html" class="footer-nav__link js-trigger-transition">The issue</a></li>
+              <li><a href="./pages/impact.html" class="footer-nav__link js-trigger-transition">Impact</a></li>
+              <li><a href="./pages/grants.html" class="footer-nav__link js-trigger-transition">Grant</a></li>
+              <li><a href="./pages/shop.html" class="footer-nav__link js-trigger-transition">Shop</a></li>
+              <li><a href="" class="footer-nav__link js-trigger-transition">Media</a></li>
+              <li><a href="./pages/involved.html" class="footer-nav__link js-trigger-transition">Get involved</a></li>
             </ul>
             <div class="copy d-none d-md-flex">
               This website is operated by The Guitar Center Music Foundation,
@@ -717,6 +734,10 @@
         </div>
       </div>
     </footer>
+
+    <div class="primary-button donate-body-button">
+      <a target="_blank" href="https://guitarcenterfoundation.kindful.com/">DONATE</a>
+    </div>
   </div>
 
 
@@ -729,6 +750,7 @@
   </script>
   <script defer src="js/owl.carousel.min.js"></script>
   <script defer src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.2/gsap.min.js"></script>
   <script defer src="js/index.js"></script>
 </body>
 

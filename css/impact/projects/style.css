@@ -13,6 +13,7 @@
 .projects {
 	padding: 160px 20px;
 	background-color: var(--white);
+	margin: -1px 0;
 }
 
 .projects__body {
