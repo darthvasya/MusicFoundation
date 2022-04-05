@@ -49,6 +49,14 @@
     width: 100%;
 }
 
+.impact .container {
+    position: relative;
+}
+
+.impact .divider {
+    bottom: unset;
+}
+
 .music-matters__top-left {
     display: flex;
     flex-direction: column;
