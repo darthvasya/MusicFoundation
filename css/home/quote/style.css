@@ -58,3 +58,13 @@
         padding: 72px 20px;
     }
 }
+
+@media (max-width: 576px) {
+    .quote-body {
+        align-items: flex-start;
+    }
+
+    .quote-body .quote__title {
+        text-align: left;
+    }
+}

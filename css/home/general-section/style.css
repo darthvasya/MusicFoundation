@@ -90,3 +90,9 @@
         padding-right: 16px;
     } */
 }
+
+@media (max-width: 576px) {
+    .general-section__body-right-head .title {
+        margin-bottom: 56px;
+    }
+}

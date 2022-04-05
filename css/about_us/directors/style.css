@@ -161,3 +161,9 @@
         padding: 0 0 0 24px;
     }
 }
+
+@media (max-width: 576px) {
+    .directors__body-bottom .card-deck {
+        row-gap: 48px;
+    }
+}

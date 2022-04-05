@@ -100,7 +100,7 @@
 
 @media (max-width: 991px) {
     .support {
-        padding: 72px 0;
+        padding: 72px 0 80px 0;
     }
     .support__body {
         padding: 0 20px;
@@ -137,6 +137,12 @@
         max-width: initial;
     }
     .support__body-right-head .subtitle {
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .support__body-right-main p:last-child {
         margin-bottom: 40px;
     }
 }

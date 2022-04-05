@@ -42,9 +42,18 @@
     row-gap: 133px;
 }
 
-.benefits-of-music__item {
-    
+.benefits-of-music .divider-min {
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    width: 0;
+    border-top: 1px solid #676767;
+    -webkit-transition: all 0.8s ease-out;
+    transition: all 0.8s  ease-out;
+
+    display: none;
 }
+
 .music-matters__img {
     width: 100%;
     max-width: 88px;
@@ -72,7 +81,7 @@
 }
 
 @media (max-width: 1199px) {
-    
+
 }
 
 @media (max-width: 991px) {
@@ -94,13 +103,31 @@
         column-gap: 0;
         row-gap: 0;
     }
-    
+
     .benefits-of-music__item {
         padding: 36px 0;
-        border-bottom: 1px solid #676767;
+        position: relative;
+        /*border-bottom: 1px solid #676767;*/
     }
     .benefits-of-music__item:last-child {
-        border-bottom: none;
+        /*border-bottom: none;*/
         padding-bottom: 56px;
+    }
+
+    .benefits-of-music .divider-grow {
+        width: 100%;
+        display: block;
+        -webkit-transition: all 0.8s ease-out;
+        transition: all 0.8s  ease-out;
+    }
+}
+
+@media (max-width: 576px) {
+    .benefits-of-music__body-top {
+        margin-bottom: 87px;
+    }
+
+    .benefits-of-music__item {
+        padding: 40px 0;
     }
 }

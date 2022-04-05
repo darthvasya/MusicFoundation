@@ -85,15 +85,13 @@ input#inputEmail:focus {
 }
 
 .footer__body .subscribe .primary-button {
-    background: linear-gradient(to top, var(--light-red) 50%, var(--dark-red) 50%);
-    background-size: 100% 200%;
-    background-position: bottom left;
-    -webkit-transition: all 0.2s ease-out;
-    transition: all .2s ease-out;
+    background: var(--light-red);
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .footer__body .subscribe .primary-button:hover{
-    background-position: top left;
+  background: var(--dark-red);
 }
 
 .footer__body .subscribe .primary-button:active {
@@ -421,4 +419,22 @@ input#inputEmail:focus {
     .footer-nav__list li:nth-child(7) {
         order: 6;
     }
+}
+
+@media (max-width: 576px) {
+  .footer {
+    padding: 56px 20px;
+  }
+
+  .footer__body .nav {
+    margin-bottom: 64px;
+  }
+
+  .footer__body .subscribe {
+    margin-bottom: 64px;
+  }
+
+  .footer__body .social-links {
+    margin-bottom: 64px;
+  }
 }

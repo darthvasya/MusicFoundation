@@ -100,3 +100,10 @@
         max-width: 100%;
     }
 }
+
+@media (max-width: 576px) {
+    .banner .description {
+        font-size: calc(48px + (32 + 32 * 0.7) * ((100vw - 576px) / 1920));
+        line-height: calc(47px + (32 + 32 * 0.7) * ((100vw - 576px) / 1920));
+    }
+}

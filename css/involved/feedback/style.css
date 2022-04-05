@@ -317,9 +317,16 @@
 	.feedback-input {
 		margin-bottom: 16px;
 	}
+
 	#involvedSubmitButton {
 		max-width: 100%;
     	min-width: 100%;
 	}
+}
 
+@media (max-width: 576px) {
+	.feedback-form .primary-button {
+		max-width: unset;
+		min-width: unset;
+	}
 }
