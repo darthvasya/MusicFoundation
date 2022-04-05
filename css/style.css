@@ -446,7 +446,10 @@ body {
 
   body.lock {
     overflow: hidden !important;
-    position: fixed;
+  }
+  body.lock .header__body.hide {
+    height: 83px !important;
+    padding: 16px 0 !important;
   }
 
   main {
