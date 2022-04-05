@@ -326,7 +326,7 @@ main {
 }
 
 html {
-  background: #cc0000; /* #1c2020 */
+  background: var(--light-red); /* #1c2020 */
 }
 
 body {
@@ -339,7 +339,7 @@ body {
   width: 100%;
   position: fixed;
   left: 0;
-  background:#cc0000; /* #1c2020 */
+  background: var(--light-red); /* #1c2020 */
   z-index: 400;
 }
 /* .body-before, .body-after {
