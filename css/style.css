@@ -326,15 +326,23 @@ main {
 }
 
 html {
-  background: #1c2020;
+  background: #cc0000; /* #1c2020 */
 }
 
 body {
   overflow: hidden;
   position: relative;
 }
-.body-before,
-.body-after {
+.body-before {
+  /* height: 51vh; */
+  height: 102vh;
+  width: 100%;
+  position: fixed;
+  left: 0;
+  background:#cc0000; /* #1c2020 */
+  z-index: 400;
+}
+/* .body-before, .body-after {
   height: 51vh;
   width: 100%;
   position: fixed;
@@ -342,22 +350,27 @@ body {
   background: #1c2020;
   z-index: 400;
 
-}
+} */
 
 .body-before {
-  top: 51%;
+  top: 102%;
   transform: translateY(-100%);
 }
 
-.body-after {
+/* .body-before {
+  top: 51%;
+  transform: translateY(-100%);
+} */
+
+/* .body-after {
   bottom: 51%;
   transform: translateY(100%);
-}
+} */
 
 .loader {
   margin: 0 auto;
-  width: 60px;
-  height: 50px;
+  /* width: 60px;
+  height: 50px; */
   text-align: center;
   font-size: 10px;
   position: absolute;
@@ -365,7 +378,8 @@ body {
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   z-index: 500;
-  opacity: 1;
+  opacity: 0;
+  /* transition: opacity 0.3s; */
 }
 
 .loader>div {
