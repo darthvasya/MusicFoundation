@@ -213,7 +213,7 @@
     cursor: pointer;
     width: 100%;
     z-index: 2;
-    background: #f1f1f2;
+    background: #ffffff;
     user-select: none;
 	border: 1px solid #bebebe;
 	color: #000000;
@@ -232,7 +232,7 @@
     padding: 10px 15px;
 }
 .new-select__item:hover {
-	background-color: white;
+	background-color: #f1f1f2;
 }
 
 .new-select__item-active span {

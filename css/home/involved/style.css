@@ -184,5 +184,9 @@
 
     .involved__body-bottom .card-title h5 {
         max-width: 164px;
+        min-width: 164px;
+    }
+    .involved__body-bottom .card-title h5 br {
+        display: initial;
     }
 }

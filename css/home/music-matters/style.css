@@ -18,11 +18,14 @@
     justify-content: stretch;
     align-items: flex-start;
     padding: 0 0 88px;
-    border-bottom: 1px solid #676767;
+    /*border-bottom: 1px solid #676767;*/
+
+    position: relative;
 }
 
 .divider {
     position: absolute;
+    bottom: 0;
     left: 0;
     width: 0;
     border-top: 1px solid #676767;
@@ -30,8 +33,28 @@
     transition: width 0.8s  ease-out;
 }
 
+.divider-min {
+    position: absolute;
+    top: -17px;
+    left: 0;
+    width: 0;
+    border-top: 1px solid #676767;
+    -webkit-transition: width 0.8s ease-out;
+    transition: width 0.8s  ease-out;
+
+    display: none;
+}
+
 .divider-grow {
     width: 100%;
+}
+
+.impact .container {
+    position: relative;
+}
+
+.impact .divider {
+    bottom: unset;
 }
 
 .music-matters__top-left {
@@ -83,6 +106,8 @@
 
 .music-matters__because-item {
     width: 100%;
+
+    position: relative;
 }
 
 .music-matters__img {
@@ -114,8 +139,8 @@
         border-top: 1px solid #676767;
     } */
     .music-matters__because-item {
-        padding: 36px 0;
-        border-bottom: 1px solid #676767;
+        padding: 40px 0;
+        /*border-bottom: 1px solid #676767;*/
     }
     .music-matters__because-item:last-child {
         border-bottom: none;
@@ -126,5 +151,13 @@
     }
     .music-matters__top-left .music-matters__description {
         padding: 0;
+    }
+
+    .divider {
+        display: none;
+    }
+
+    .divider-min {
+        display: block;
     }
 }

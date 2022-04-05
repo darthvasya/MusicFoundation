@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  position: relative;
+  /*position: relative;*/
   padding: 0 20px;
 }
 
@@ -296,6 +296,7 @@ main {
   position: fixed;
   bottom: 0;
   max-width: 100%;
+  z-index: 50;
 
   background: linear-gradient(to top, var(--light-red) 50%, var(--dark-red) 50%);
   background-size: 100% 200%;

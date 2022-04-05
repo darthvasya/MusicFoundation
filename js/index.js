@@ -84,17 +84,27 @@ $(document).ready(function() {
                 let countersSmall = document.querySelectorAll(".value-number-small");
                 const speed = 2000;
 
+
+                function commify(n) {
+                    let parts = n.toString().split(".");
+                    const numberPart = parts[0];
+                    const decimalPart = parts[1];
+                    const thousands = /\B(?=(\d{3})+(?!\d))/g;
+                    return numberPart.replace(thousands, ",") + (decimalPart ? "." + decimalPart : "");
+                }
+
                 counters.forEach((counter) => {
                     const animate = () => {
                         const value = +counter.getAttribute("akhi");
-                        const data = +counter.innerText;
+                        const data = +(counter.innerText.split(',').join('').split('.').join(''));
 
                         const time = value / speed;
                         if (data < value) {
-                        counter.innerText = Math.ceil(data + time);
-                        setTimeout(animate, 1);
+                            let num = Math.ceil(data + time)
+                            counter.innerText = commify(Math.ceil(data + time));
+                            setTimeout(animate, 1);
                         } else {
-                        counter.innerText = value;
+                            counter.innerText = commify(value);
                         }
                     };
 
@@ -172,6 +182,15 @@ $(document).ready(function() {
             
         }
         scrollPos = st;
+
+        $('.divider-min').each(function() {
+            let self = $(this),
+                height = self.offset().top + (self.height() * 0,9);
+
+            if ($(document).scrollTop() + windowHeight >= height) {
+                self.addClass('divider-grow');
+            }
+        });
         
     });
     $('.animate-img, .animate-secondary-img').each(function() {
@@ -236,7 +255,7 @@ $(document).ready(function() {
 
                 let options = document.querySelectorAll('.new-select__item');
 
-                selectItem.on('click', function() {
+                selectItem.on('click', function(e) {
                     let chooseItem = $(this).data('value');
 
                     $('select').val(chooseItem).attr('selected', 'selected');
@@ -245,6 +264,16 @@ $(document).ready(function() {
                     selectList.slideUp(duration);
                     selectHead.addClass('active-head');
                     selectHead.removeClass('on');
+
+                    document.querySelectorAll('option').forEach((elem) => {
+                        elem.removeAttribute('selected');
+                    })
+
+                    document.querySelectorAll('option').forEach((elem) => {
+                        if (elem.innerText === e.target.innerText) {
+                            elem.setAttribute('selected', '');
+                        }
+                    })
 
                     let optionCurrent = document.querySelector('.new-select');
                     let options = document.querySelectorAll('.new-select__item');
@@ -266,6 +295,10 @@ $(document).ready(function() {
                     if (e.target.classList.contains('projects') || e.target.classList.contains('container') || e.target.classList.contains('projects__body-top') || e.target.tagName === 'IMG' || e.target.tagName === 'FORM' || e.target.classList.contains('feedback-container') || e.target.classList.contains('feedback-textarea') || e.target.classList.contains('feedback-section')) {
                         selectList.slideUp(duration);
                         selectHead.removeClass('on');
+
+                        // console.log(document.querySelector('option[selected]'))
+                        document.querySelector('.active-head').innerText = document.querySelector('option[selected]').innerText;
+                        // selectHead.text($(this).find('span').text() );
                     }
                 });
                 // end unhover behavior
