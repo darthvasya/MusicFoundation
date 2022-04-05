@@ -171,7 +171,7 @@ $(document).ready(function() {
 
                 let options = document.querySelectorAll('.new-select__item');
 
-                selectItem.on('click', function() {
+                selectItem.on('click', function(e) {
                     let chooseItem = $(this).data('value');
 
                     $('select').val(chooseItem).attr('selected', 'selected');
@@ -180,6 +180,16 @@ $(document).ready(function() {
                     selectList.slideUp(duration);
                     selectHead.addClass('active-head');
                     selectHead.removeClass('on');
+
+                    document.querySelectorAll('option').forEach((elem) => {
+                        elem.removeAttribute('selected');
+                    })
+
+                    document.querySelectorAll('option').forEach((elem) => {
+                        if (elem.innerText === e.target.innerText) {
+                            elem.setAttribute('selected', '');
+                        }
+                    })
 
                     let optionCurrent = document.querySelector('.new-select');
                     let options = document.querySelectorAll('.new-select__item');
@@ -201,6 +211,10 @@ $(document).ready(function() {
                     if (e.target.classList.contains('projects') || e.target.classList.contains('container') || e.target.classList.contains('projects__body-top') || e.target.tagName === 'IMG' || e.target.tagName === 'FORM' || e.target.classList.contains('feedback-container') || e.target.classList.contains('feedback-textarea') || e.target.classList.contains('feedback-section')) {
                         selectList.slideUp(duration);
                         selectHead.removeClass('on');
+
+                        // console.log(document.querySelector('option[selected]'))
+                        document.querySelector('.active-head').innerText = document.querySelector('option[selected]').innerText;
+                        // selectHead.text($(this).find('span').text() );
                     }
                 });
                 // end unhover behavior
