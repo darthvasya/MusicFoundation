@@ -46,15 +46,16 @@
 }
 
 .divider-grow {
+
     width: 100%;
 }
 
-.impact .container {
+.impact .impact__top {
     position: relative;
 }
 
 .impact .divider {
-    bottom: unset;
+    bottom: 0;
 }
 
 .music-matters__top-left {
@@ -129,7 +130,7 @@
         padding: 0;
     }
     .music-matters__title {
-        margin-bottom: 64px;
+        margin-bottom: 56px;
     }
     .music-matters__bottom {
         padding: 0;
@@ -159,5 +160,12 @@
 
     .divider-min {
         display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .music-matters__title {
+        font-size: calc(40px + (24 + 24 * 0.7) * ((100vw - 375px) / 1920));
+        line-height: calc(40px + (24 + 24 * 0.7) * ((100vw - 375px) / 1920));
     }
 }
