@@ -342,8 +342,8 @@
     .header__menu .line {
         border-bottom: 1px solid #707070;
         width: 0;
-        -webkit-transition: all 0.4s ease 0s;
-        transition: all 0.4s ease 0s;
+        -webkit-transition: all 0.2s ease 0s;
+        transition: all 0.2s ease 0s;
     }
     .header__menu .line.animate {
         width: 100%;
@@ -371,8 +371,8 @@
         padding: 16px 0;
         margin: 0;
         width: 100%;
-        -webkit-transition: all 0.5s ease 0s;
-        transition: all 0.5s ease 0s;
+        -webkit-transition: all 0.3s ease 0s;
+        transition: all 0.3s ease 0s;
         margin-left: -60%;
     }
     .header__list li.animate {
