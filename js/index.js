@@ -44,22 +44,45 @@ $(document).ready(function() {
         transitionClose(href);
     });
 
-    function transition() {
-        var tl = gsap.timeline();
+    // function transition() {
+    //     var tl = gsap.timeline();
 
-        tl.to('.body-before', 0.2, {top: '0%' , ease: Power2.easeOut}, '+=1.5', 'open')
-        tl.to('.body-after', 0.2, {bottom: '0%', ease: Power2.easeOut}, '-=0.2', 'open')
-        tl.to($('.loader'), 0.2, {opacity: 0}, '-=0.2');
+    //     tl.to('.body-before', 0.2, {top: '0%' , ease: Power2.easeOut}, '+=1.5', 'open')
+    //     tl.to('.body-after', 0.2, {bottom: '0%', ease: Power2.easeOut}, '-=0.2', 'open')
+    //     tl.to($('.loader'), 0.2, {opacity: 0}, '-=0.2');
+    //     tl.to($('body'), 0.2, {overflow: "auto"}, '-=0.2');
+        
+    // }
+    function transition() {
+        $('html').scrollTop(0);
+        var tl = gsap.timeline();
+        tl.to($('.loader'), 0.2, {opacity: 1, ease: Power2.easeOut}, '+=0', 'open');
+        tl.to('.body-before', 0.2, {top: '0%' , ease: Power2.easeOut}, '+=1.5', 'open') // ease: Expo.easeOut
+        tl.to($('.loader'), 0.2, {opacity: 0, "z-index": 0}, '-=0.2');
         tl.to($('body'), 0.2, {overflow: "auto"}, '-=0.2');
         
     }
+
+    // function transitionClose(href) {
+    //     var tl = gsap.timeline();
+
+    //     tl.to('body', 0.2, {overflow: "hidden"}, 'close')
+    //     tl.to('.body-before', {top: '51%', ease: Power2.easeOut}, 'close')
+    //     tl.to('.body-after', {bottom: '51%', ease: Power2.easeOut}, 'close')
+        
+        
+    //     if(href) {
+    //         setTimeout(() => {
+    //             window.location.href = href
+    //         }, 400);
+    //     }
+    // }
 
     function transitionClose(href) {
         var tl = gsap.timeline();
 
         tl.to('body', 0.2, {overflow: "hidden"}, 'close')
-        tl.to('.body-before', {top: '51%', ease: Power2.easeOut}, 'close')
-        tl.to('.body-after', {bottom: '51%', ease: Power2.easeOut}, 'close')
+        tl.to('.body-before', {top: '102%', ease: Power2.easeOut}, 'close') // ease: Expo.easeOut
         
         
         if(href) {
@@ -168,20 +191,23 @@ $(document).ready(function() {
         // animate header height
         
         let st = $(this).scrollTop();
-        if (st > scrollPos) {
+
+        if ($(window).width() < 768) {
+            if (st > scrollPos) {
             if (st > 300) {
             $('.header__body').removeClass('show');
             $('.header__body').addClass('hide');
             }
-        } else {
-            const lock = document.querySelector('.lock');
-            if (!lock) {
-                $('.header__body').removeClass('hide');
-                $('.header__body').addClass('show');
+            } else {
+                const lock = document.querySelector('.lock');
+                if (!lock) {
+                    $('.header__body').removeClass('hide');
+                    $('.header__body').addClass('show');
+                }
+                
             }
-            
+            scrollPos = st;
         }
-        scrollPos = st;
 
         $('.divider-min').each(function() {
             let self = $(this),
