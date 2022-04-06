@@ -339,7 +339,7 @@ body {
   width: 100%;
   position: fixed;
   left: 0;
-  background: var(--light-red); /* #1c2020 */
+  background: #ffffff; /* #1c2020 */
   z-index: 400;
 }
 /* .body-before, .body-after {
@@ -353,8 +353,8 @@ body {
 } */
 
 .body-before {
-  top: 102%;
-  transform: translateY(-100%);
+  /*top: 102%;*/
+  /*transform: translateY(-100%);*/
 }
 
 /* .body-before {
@@ -379,6 +379,8 @@ body {
   transform: translateY(-50%) translateX(-50%);
   z-index: 500;
   opacity: 0;
+
+  display: none;
 }
 
 /* .loader>div {
