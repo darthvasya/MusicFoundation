@@ -90,10 +90,10 @@ $(document).ready(function() {
     function transition() {
         $('html').scrollTop(0);
         var tl = gsap.timeline();
-        tl.to($('.loader'), 0.2, {opacity: 1, ease: Power2.easeOut}, '+=0', 'open');
-        tl.to('.body-before', 0.2, {top: '0%' , ease: Power2.easeOut}, '+=1.5', 'open') // ease: Expo.easeOut
-        tl.to($('.loader'), 0.2, {opacity: 0, "z-index": 0}, '-=0.2');
-        tl.to($('body'), 0.2, {overflow: "auto"}, '-=0.2');
+        tl.to($('.loader'), 0.1, {opacity: 1, ease: Power2.easeOut}, '+=0', 'open');
+        tl.to('.body-before', 0.1, {top: '0%' , ease: Power2.easeOut}, '+=0.5', 'open') // ease: Expo.easeOut
+        tl.to($('.loader'), 0.1, {opacity: 0, "z-index": 0}, '-=0.1');
+        tl.to($('body'), 0.1, {overflow: "auto"}, '-=0.1');
 
     }
 
@@ -115,13 +115,13 @@ $(document).ready(function() {
     function transitionClose(href) {
         var tl = gsap.timeline();
 
-        tl.to('body', 0.2, {overflow: "hidden"}, 'close')
+        tl.to('body', 0.1, {overflow: "hidden"}, 'close')
         tl.to('.body-before', {top: '102%', ease: Power2.easeOut}, 'close') // ease: Expo.easeOut
 
         if(href) {
             setTimeout(() => {
                 window.location.href = href
-            }, 400);
+            }, 200);
         }
     }
     // end loader
