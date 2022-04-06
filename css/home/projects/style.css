@@ -85,6 +85,10 @@
     transform: scale(1.05);
 }
 
+.projects__body-bottom .img-wrapper:hover .play {
+    transform: scale(1.05) translate(-50%, -50%);
+}
+
 .projects__body-bottom .img-wrapper .play:hover {
     transform: scale(1.05) translate(-50%, -50%);
 }
