@@ -78,10 +78,12 @@ input#inputEmail::-moz-placeholder {
   color: #ffffff;
 }
 input#inputEmail:active {
-  border: 2px solid #bebebe;
+  outline: 2px solid #bebebe;
+  box-shadow: none;
 }
 input#inputEmail:focus {
-  border: 2px solid #bebebe;
+  outline: 2px solid #bebebe;
+  box-shadow: none;
 }
 
 .footer__body .subscribe .primary-button {
