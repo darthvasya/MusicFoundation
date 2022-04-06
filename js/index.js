@@ -308,9 +308,7 @@ $(document).ready(function() {
                         selectHeading.innerText = 'Reason';
                     }
                 } else {
-                    if (selectHeading.innerText !== 'ALL') {
-                        selectHeading.innerText = 'YEAR';
-                    }
+                    selectHeading.innerText = 'YEAR';
                 }
 
                 let options = document.querySelectorAll('.new-select__item');
@@ -357,7 +355,12 @@ $(document).ready(function() {
                         selectHead.removeClass('on');
 
                         // console.log(document.querySelector('option[selected]'))
-                        document.querySelector('.active-head').innerText = document.querySelector('option[selected]').innerText;
+                        if (document.querySelector('.active-head')) {
+                            document.querySelector('.active-head').innerText = document.querySelector('option[selected]').innerText;
+                        } else {
+                            document.querySelector('.new-select').innerText = document.querySelector('option[selected]').innerText;
+                        }
+
                         // selectHead.text($(this).find('span').text() );
                     }
                 });
