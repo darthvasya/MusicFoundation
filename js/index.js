@@ -90,8 +90,8 @@ $(document).ready(function() {
     function transition() {
         $('html').scrollTop(0);
         var tl = gsap.timeline();
-        tl.to($('.loader'), 0.1, {opacity: 1, ease: Power2.easeOut}, '+=0', 'open');
-        tl.to('.body-before', 0.1, {top: '0%' , ease: Power2.easeOut}, '+=0.5', 'open') // ease: Expo.easeOut
+        tl.to($('.loader'), 0.1, {opacity: 1, ease: Power1.easeOut}, '+=0', 'open');
+        tl.to('.body-before', 0.1, {top: '0%' , ease: Power1.easeOut}, '+=0.5', 'open') // ease: Expo.easeOut
         tl.to($('.loader'), 0.1, {opacity: 0, "z-index": 0}, '-=0.1');
         tl.to($('body'), 0.1, {overflow: "auto"}, '-=0.1');
 
@@ -116,12 +116,12 @@ $(document).ready(function() {
         var tl = gsap.timeline();
 
         tl.to('body', 0.1, {overflow: "hidden"}, 'close')
-        tl.to('.body-before', {top: '102%', ease: Power2.easeOut}, 'close') // ease: Expo.easeOut
+        tl.to('.body-before', {top: '102%', ease: Power1.easeOut}, 'close') // ease: Expo.easeOut
 
         if(href) {
             setTimeout(() => {
                 window.location.href = href
-            }, 200);
+            }, 400);
         }
     }
     // end loader
