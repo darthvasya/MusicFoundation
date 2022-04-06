@@ -91,7 +91,7 @@ $(document).ready(function() {
         $('html').scrollTop(0);
         var tl = gsap.timeline();
         tl.to($('.loader'), 0.1, {opacity: 1, ease: Power1.easeOut}, '+=0', 'open');
-        tl.to('.body-before', 0.1, {top: '0%' , ease: Power1.easeOut}, '+=0.5', 'open') // ease: Expo.easeOut
+        tl.to('.body-before', 0.5, {top: '0%' , ease: Power1.easeOut}, '+=0.5', 'open') // ease: Expo.easeOut
         tl.to($('.loader'), 0.1, {opacity: 0, "z-index": 0}, '-=0.1');
         tl.to($('body'), 0.1, {overflow: "auto"}, '-=0.1');
 
