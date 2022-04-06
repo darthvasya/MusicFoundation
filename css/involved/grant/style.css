@@ -12,8 +12,8 @@
 }
 
 .grant {
-	padding: 0 20px;
-	background: #242424;
+	padding: 96px 20px;
+	background: #ffffff;
 }
 
 .grant-container {
@@ -27,6 +27,7 @@
 }
 
 .grant_message {
+	width: 100%;
 	text-align: left;
 	font: normal normal normal 24px/24px var(--helvetica);
 	font-size: calc(18px + (6 + 6 * 0.7) * ((100vw - 767px) / 1920));
@@ -60,6 +61,11 @@
 } */
 
 @media (max-width: 767px) {
+
+	.grant {
+		padding: 0px 20px;
+	}
+
 	.grant .container {
 		padding: 0;
 	}
