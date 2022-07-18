@@ -447,6 +447,10 @@ body {
   body.lock {
     overflow: hidden !important;
   }
+  body.lock .header__body.hide {
+    height: 83px !important;
+    padding: 16px 0 !important;
+  }
 
   main {
     padding: 83px 0 0 0;

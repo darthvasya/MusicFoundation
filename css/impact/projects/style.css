@@ -213,6 +213,10 @@
 	transform: scale(1.05);
 }
 
+.projects__body-bottom .img-wrapper:hover .play {
+	transform: scale(1.05) translate(-50%, -50%);
+}
+
 .projects__body-bottom .img-wrapper .play:hover {
 	transform: scale(1.05) translate(-50%, -50%);
 }
@@ -238,6 +242,7 @@
 }
 
 .projects__body-bottom .card-date {
+	margin-bottom: 0;
 	text-align: left;
 	font: normal normal bold 14px/17px var(--helvetica-bold);
 	letter-spacing: 0px;

@@ -78,10 +78,12 @@ input#inputEmail::-moz-placeholder {
   color: #ffffff;
 }
 input#inputEmail:active {
-  border: 2px solid #bebebe;
+  outline: 2px solid #bebebe;
+  box-shadow: none;
 }
 input#inputEmail:focus {
-  border: 2px solid #bebebe;
+  outline: 2px solid #bebebe;
+  box-shadow: none;
 }
 
 .footer__body .subscribe .primary-button {
@@ -158,10 +160,11 @@ input#inputEmail:focus {
 }
 
 .copy {
+  max-width: 502px;
   text-align: left;
   font: normal normal normal 10px/12px var(--helvetica);
   letter-spacing: 0px;
-  color: var(--text-grey);
+  color: #676767;
   opacity: 1;
 }
 

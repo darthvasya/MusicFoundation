@@ -95,6 +95,11 @@
     position: relative;
 }
 
+.impact__bottom-item .divider-min {
+    top: unset;
+    bottom: -17px;
+}
+
 .impact__bottom-item:nth-child(4) .impact__bottom-subtitle {
     white-space: nowrap;
 }
